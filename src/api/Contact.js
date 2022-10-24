@@ -8,8 +8,8 @@ export const getInfo = async () => {
     return res;
 }
 
-export const editInfo = async (FormData) => {
-    let formdata = new formData(formData)
+export const editInfo = async (formData) => {
+    let formdata = new FormData(formData)
 
     let res = await axios.put(baseUrl + 'contactinformation/admin', formdata)
     .then(res => {return res.data;})
