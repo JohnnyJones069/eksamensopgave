@@ -1,1 +1,3 @@
 Insæt API kald så det bliver nemmere med at put/get/post/delete i alle elementer med API kald.
+
+FETCH:
