@@ -1,3 +1,4 @@
 Insæt API kald så det bliver nemmere med at put/get/post/delete i alle elementer med API kald.
 
 FETCH:
+Skal ikke røres ved. Kender den ikke så godt
