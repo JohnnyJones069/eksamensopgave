@@ -1,3 +1,31 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+// @font-face {
+//   font-family: ;
+//   font-style: normal ;
+//   font-weight: normal ;
+//   src: url() format();
+// }
+
+// @font-face {
+//   font-family: ;
+//   font-style: normal;
+//   font-weight: bold;
+//   src: url() format();
+// }
+
+$font: 'Segoe UI', "Roberto", Verdana, sans-serif;
+$fontNormal: ""; 
+$fontBold: "";
+// $nav:;
+// $header:;
+// $button:;
+// $backgroundcolor:;
+
 .App {
   text-align: center;
 }
@@ -40,7 +68,11 @@
 
 
 // PUBLIC SCSS LINK
-
+@import './scss/Header.scss';
+@import './scss/Navbar.scss';
 
 // ADMIN SCSS LINK
+@import './scss/Admin.scss';
+@import './scss/Login.scss';
+@import './scss/Loader.scss';
 
