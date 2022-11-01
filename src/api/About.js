@@ -1,5 +1,5 @@
 import axios from "axios";
-import { baseUrl } from "./Api";
+import { baseUrl } from "./api";
 
 export const getAbout = async () => {
   let res = await axios
