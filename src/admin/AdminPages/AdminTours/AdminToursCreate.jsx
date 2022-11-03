@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ReactQuill from 'react-quill'
 
-import { createTour } from './AdminFetch'
+import { createTour } from '../../../api/tour'
 
 import 'react-quill/dist/quill.snow.css';
 const modules = {

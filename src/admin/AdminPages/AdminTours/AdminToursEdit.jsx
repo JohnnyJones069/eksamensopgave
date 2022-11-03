@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import Loader from '../components/Loader'
-import { getTourByID, editTour } from './AdminFetch'
-import ErrorMessage from '../components/ErrorMessage'
+import Loader from '../../components/Loader'
+import { getTourByID, editTour } from '../../../api/tour'
+import ErrorMessage from '../../components/ErrorMessage'
 import ReactQuill from 'react-quill'
 
 import 'react-quill/dist/quill.snow.css';
-import MessageBox from '../components/MessageBox'
+import MessageBox from '../../components/MessageBox'
 const modules = {
   toolbar: [
     [ 'bold', 'italic', 'underline', 'strike' ],

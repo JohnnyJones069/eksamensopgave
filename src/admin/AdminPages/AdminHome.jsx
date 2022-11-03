@@ -2,7 +2,7 @@ import React from 'react'
 
 const AdminHome = () => {
   return (
-    <div>
+    <div className='AdminPage'>
       <h1>Velkommen til Admin-Home</h1>
       <p>Her kan du oprette/slette/redigere i dine opslag.</p>
     </div>

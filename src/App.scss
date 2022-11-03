@@ -26,9 +26,9 @@ $fontBold: "";
 // $button:;
 // $backgroundcolor:;
 
-.App {
-  text-align: center;
-}
+// .App {
+//   text-align: center;
+// }
 
 .App-logo {
   height: 40vmin;
@@ -72,7 +72,8 @@ $fontBold: "";
 @import './scss/Navbar.scss';
 
 // ADMIN SCSS LINK
-@import './scss/Admin.scss';
-@import './scss/Login.scss';
-@import './scss/Loader.scss';
+@import './scss/Admin/Admin.scss';
+@import './scss/Admin/Login.scss';
+@import './scss/Admin/Loader.scss';
+@import './scss/Admin/ErrorMessage.scss';
 

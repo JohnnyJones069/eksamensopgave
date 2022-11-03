@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
-import Logout from '../../components/Logout';
+import Logout from '../components/Logout';
 // import { LoginContext } from '../../context/LoginContext';
 
 
@@ -11,14 +11,14 @@ const AdminNavbar = () => {
 
 
   return (
-    <nav className='Navbar'>
+    <nav className='AdminNavbar'>
       <ul>
         {/* end tilføjet for at ungå at Home er .aktiv konstant */ }
         <li><NavLink to="/admin" end>Admin Home</NavLink></li>
         <li><NavLink to="admintours">Admin Tours</NavLink></li>
         <li><NavLink to="admintoursopret">Admin Tours Opret</NavLink></li>
         <li><NavLink to="/" end>Public Home</NavLink></li>
-        <li><Logout /></li>
+        <span><Logout /></span>
       </ul>
     </nav>
   )

@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
 import { Outlet, Navigate } from 'react-router-dom'
-import AdminHeader from './AdminHeader'
 import AdminNavbar from './AdminNavbar'
-import AdminFooter from './AdminFooter'
-import {LoginContext} from '../../context/LoginContext'
+import {LoginContext} from '../context/LoginContext'
 
 const AdminLayout = () => {
 
@@ -16,16 +14,14 @@ const AdminLayout = () => {
 
   return (
     <div className='AdminLayout'>
-      <AdminHeader />
 
-      <div className='admin-container'>
+      <div className='Admin-container'>
         <AdminNavbar />
 
         <Outlet />
       </div>
 
 
-      <AdminFooter />
     </div>
   )
 }

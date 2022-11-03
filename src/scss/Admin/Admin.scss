@@ -1,0 +1,63 @@
+// Navigation
+.AdminLayout{
+    height: 100vh;
+
+    .Admin-container{
+        display: flex;
+        padding: 5px;
+
+        .AdminPage{
+            width: 100%;
+            padding:20px;
+        }
+    }
+}
+
+.AdminNavbar {
+    margin: 0;
+    padding: 30px;
+    width: 200px;
+    background-color: #f1f1f1;
+    // position: fixed;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .AdminNavbar li {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    width: auto;
+    border-radius: 20px;
+  }
+
+  .AdminNavbar span {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    width: auto;
+    border-radius: 20px;
+  }
+   
+  
+  .AdminNavbar li:hover {
+    background-color: rgb(122, 122, 122);
+    color: white;
+    width: auto;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .AdminNavbar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .AdminNavbar li {float: left;}
+  }
+  
+
+  .AdminFooter{
+    
+  }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ErrorMessage from '../components/ErrorMessage'
 import Loader from '../components/Loader'
 import {getAbout, editAbout} from "../../api/about";
-import useThumb from '../hooks/useThumb'
+import useThumb from '../../hooks/useThumb';
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css';
 import MessageBox from '../components/MessageBox'
