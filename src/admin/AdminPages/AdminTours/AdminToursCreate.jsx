@@ -81,7 +81,7 @@ const AdminToursCreate = () => {
                     <label htmlFor='inpContent'>Turens Content:</label>
                     <br />
                     {/* <textarea name="content" id="inpContent" required /> */ }
-                    <ReactQuill theme="snow" modules={modules} placeholder='Beskriv turen' onChange={ setContent } />
+                    <ReactQuill className='quill' theme="snow" modules={modules} placeholder='Beskriv turen' onChange={ setContent } />
                 </div>
 
                 {/* Room Type */ }
@@ -89,7 +89,7 @@ const AdminToursCreate = () => {
                     <label htmlFor='txtRoom'>Turens Værelses type:</label>
                     <br />
                     {/* <textarea name="roomtype" placeholder='Skriv din værelses type her' id="txtRoom" required /> */}
-                    <ReactQuill theme="snow" modules={modules} placeholder='Beskriv turen' onChange={ setRoomtype } />
+                    <ReactQuill className='quill' theme="snow" modules={modules} placeholder='Beskriv turen' onChange={ setRoomtype } />
 
                 </div>
 

@@ -5,10 +5,10 @@ export const getAbout = async () => {
   let res = await axios
     .get(baseUrl + "about")
     .then(res => {
-      return res.data;
+      return res;
     })
     .catch(err => {
-      return err.response.data;
+      return err.response;
     });
   return res;
 };
@@ -21,6 +21,6 @@ export const editAbout = async (data) => {
     }, new FormData());
 
     let res = await axios.put(baseUrl + 'about/admin', getFormData(data))
-    .then(res => {return res.data;})
-    .catch(err => {return err.response.data})
+    .then(res => {return res;})
+    .catch(err => {return err.response})
 }
