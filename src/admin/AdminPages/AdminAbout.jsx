@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ErrorMessage from '../components/ErrorMessage'
 import Loader from '../components/Loader'
-import {getAbout, editAbout} from "../../api/about";
+import { getAbout, editAbout } from "../../api/about";
 import useThumb from '../../hooks/useThumb';
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css';
@@ -57,7 +57,7 @@ const AdminAbout = () => {
         console.log( response.data )
         setMessage( "Om os er rettet!" )
 
-        // Tøm input-file og thumb
+        // Tøm input-file og thumbnail
         e.target.form.image.value = "";
         makeThumb( "" );
 

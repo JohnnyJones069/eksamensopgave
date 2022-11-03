@@ -17,6 +17,8 @@ import NoMatch from './admin/components/NoMatch';
 import AdminToursCreate from './admin/AdminPages/AdminTours/AdminToursCreate';
 import AdminToursEdit from './admin/AdminPages/AdminTours/AdminToursEdit';
 import AdminAbout from './admin/AdminPages/AdminAbout';
+import AdminContact from './admin/AdminPages/AdminContact';
+import AdminFooter from './admin/AdminPages/AdminFooter';
 
 
 
@@ -46,6 +48,8 @@ function App () {
           <Route path="admintoursopret" element={<AdminToursCreate />} />
           <Route path="admintoursret/:ID" element={<AdminToursEdit />} />
           <Route path="adminabout" element={<AdminAbout />} />
+          <Route path="admincontact" element={<AdminContact />} />
+          <Route path="adminfooter" element={<AdminFooter />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
 

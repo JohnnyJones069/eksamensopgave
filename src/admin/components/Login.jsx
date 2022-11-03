@@ -32,28 +32,27 @@ const Login = () => {
   return (
     <div className='Login'>
 
-      {/* {
-        user && <h2>Bruger er logget som: { user }</h2>
-      } */}
+      <div className='login-container'>
+        <h1>Login</h1>
+        <form onSubmit={ handleLogin }>
 
-      <h1>Login</h1>
-      <form onSubmit={ handleLogin }>
+          <div>
+            <label htmlFor='inpBruger'>Brugernavn:</label>
+            <br />
+            <input type="text" onChange={ ( e ) => setUserName( e.target.value ) } id="inpBruger" placeholder="Brugernavn" />
+          </div>
 
-        <div>
-          <label htmlFor='inpBruger'>Brugernavn:</label>
-          <br />
-          <input type="text" onChange={ ( e ) => setUserName( e.target.value ) } id="inpBruger" placeholder="Brugernavn" />
-        </div>
+          <div>
+            <label htmlFor='inpPassword'>Adgangskode:</label>
+            <br />
+            <input type="password" onChange={ ( e ) => setPassword( e.target.value ) } id="inpPassword" placeholder='Adgangskpde' />
+          </div>
 
-        <div>
-          <label htmlFor='inpPassword'>Adgangskode:</label>
-          <br />
-          <input type="password" onChange={ ( e ) => setPassword( e.target.value ) } id="inpPassword" placeholder='Adgangskpde' />
-        </div>
+          <button type="submit">Login</button>
 
-        <button type="submit">Login</button>
+        </form>
 
-      </form>
+      </div>
     </div>
   )
 }

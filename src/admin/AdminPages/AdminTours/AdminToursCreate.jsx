@@ -13,8 +13,6 @@ const modules = {
 
 }
 
-
-
 const AdminToursCreate = () => {
 
     const [ loading, setLoading ] = useState( false )
