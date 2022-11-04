@@ -1,0 +1,26 @@
+.Login {
+    display: flex;
+    justify-content: center;
+  
+    .login-container {
+      width: auto;
+      padding: 20px;
+      border: 1px solid rgb(166, 166, 166);
+      border-radius: 3px;
+      background-color: lightgray;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin-top: 30px;
+    }
+  
+    h1 {
+      font-size: 25px;
+  
+    }
+
+    .loginbutton{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+  }

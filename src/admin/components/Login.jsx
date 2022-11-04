@@ -21,10 +21,7 @@ const Login = () => {
   // Håndtere login - med indhold fra login-form
   const handleLogin = ( e ) => {
     e.preventDefault(); //Forhindre reloading af siden.
-
     signIn( userName, password );
-
-
 
   }
 
@@ -33,7 +30,7 @@ const Login = () => {
     <div className='Login'>
 
       <div className='login-container'>
-        <h1>Login</h1>
+        <h1>Admin Login</h1>
         <form onSubmit={ handleLogin }>
 
           <div>
@@ -47,8 +44,9 @@ const Login = () => {
             <br />
             <input type="password" onChange={ ( e ) => setPassword( e.target.value ) } id="inpPassword" placeholder='Adgangskpde' />
           </div>
-
-          <button type="submit">Login</button>
+          <div className='loginbutton'>
+            <button type="submit">Login</button>
+          </div>
 
         </form>
 

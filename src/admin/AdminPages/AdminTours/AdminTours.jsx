@@ -57,7 +57,7 @@ const AdminTours = () => {
       <div className='topPage'>
         <h1>Her er oversigten over dine ture</h1>
         {/* Tjek med Marianne om hvad der kan gøres med Linket */}
-        <Link to="admintoursopret" className="create">
+        <Link to="/admin/admintoursopret" className="create">
           <IoIosCreate size='2em' color='black' title='Create button' />
         </Link>
       </div>

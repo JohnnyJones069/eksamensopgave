@@ -16,7 +16,6 @@
 .AdminNavbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: #3333;
   color: black;
   position: relative; //aht burger-buttons absolute-position
@@ -29,6 +28,7 @@
     padding: 0;
     list-style-type: none;
 
+    // align-items: center;
     li {
 
       transition: all 0.5s ease;
@@ -50,13 +50,20 @@
       padding: 1rem;
     }
 
+  }
+
+  .logout {
+
     button {
-      margin-top:0.9rem; 
+      margin-top: 0.9rem;
       padding: 0.1rem;
       right: 0;
     }
+
   }
 }
+
+
 
 
 .AdminTours {
@@ -128,32 +135,35 @@
     width: 300px;
 
   }
-
 }
 
-
-.Login {
+.NoMatch{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
 
-  .login-container {
-    width: auto;
-    padding:20px;
-    border: 1px solid rgb(166, 166, 166);
-    border-radius: 3px;
-    background-color: lightgray;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin-top:30px;
+  .nomatch-container > *{
+    margin-top: 15px;
+  }
+  button{
+    padding:5px;
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
   }
 
-  h1 {
-    font-size: 25px;
-
-  }
 }
 
-
-
+@media screen and (max-width: 1533px) {
+  .card{
+    width: 49%;
+  }
+  
+}
 
 
 @media screen and (max-width: 800px) {
@@ -167,23 +177,26 @@
     float: left;
   }
 
-  .card {
-    width: 49%;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding: 30px 30px;
-    border: 1px solid rgb(166, 166, 166);
-    border-radius: 3px;
-    background-color: silver;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-  }
+  // .card {
+  //   width: 45%;
+  //   margin-right: 5px;
+  //   margin-bottom: 5px;
+  //   padding: 30px 30px;
+  //   border: 1px solid rgb(166, 166, 166);
+  //   border-radius: 3px;
+  //   background-color: silver;
+  //   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  //   transition: 0.3s;
+  // }
 
 }
 
-@media screen and (max-width:650px) {
-  .card {
-    width: 100%;
-    margin-bottom: 15px;
+@media screen and (max-width:850px) {
+  .AdminLayout{
+    width: 850px;
   }
+  // .card {
+  //   width: 100%;
+  //   margin-bottom: 15px;
+  // }
 }

@@ -4,7 +4,7 @@ const AdminHome = () => {
   return (
     <div className='AdminPage'>
       <h1>Velkommen til Admin-Home</h1>
-      <p>Her kan du oprette/slette/redigere i dine opslag.</p>
+      <p>Her kan DU redigere på sidens indhold.</p>
     </div>
   )
 }
