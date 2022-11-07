@@ -1,0 +1,96 @@
+.Overdiv {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 30px;
+}
+
+.VoresServices {
+    margin-top: 30px;
+    display: flex;
+    height: auto;
+
+    .VoresServiceHeader{
+        height: auto;
+        float: left;
+    }
+
+    .Service {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Flaticon';
+
+    }
+}
+
+.serviceinfodiv{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .serviceinfo {
+        width: 40%;
+        height: 100px;
+
+        .serviceinfotext{
+            width: 70%;
+            float: right;
+        }
+        
+        span{
+            font-size: 60px;
+            
+        }
+    
+        h2 {
+            font-family: $trueFont, Arial, Helvetica, sans-serif;
+        }
+    
+        p {
+            font-family: $trueFont, Arial, Helvetica, sans-serif;
+        }
+    
+        .serviceimg {
+            flex-direction: row;
+            display: flex;
+            float: left;
+    
+            img {
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.BookServiceNu {
+    display: flex;
+    padding-left: 20%;
+    padding-right: 30%;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    height: auto;
+
+    h3 {
+        font-size: 20px;
+    }
+
+    input {
+        margin-top: 0.7em;
+        height: 30px;
+        border-radius: 5px;
+        border-color: rgb(226, 226, 226);
+    }
+
+    button {
+        height: 30px;
+        margin-top: 0.5em;
+        font-size: 13px;
+        border-radius: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.orange {
+    color: $safety-orange-blaze-orange
+}

@@ -1,6 +1,6 @@
 const api = {
-    baseUrl: 'http://localhost:5099/',
-    imageUrl: 'http://localhost:5099/images'
+    baseUrl: 'http://localhost:5333/',
+    imageUrl: 'http://localhost:5333/images/'
 }
 
 export let imgUrl = api.imageUrl

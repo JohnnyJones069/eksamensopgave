@@ -1,75 +1,76 @@
-*{
+* {
   box-sizing: border-box;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-// @font-face {
-//   font-family: ;
-//   font-style: normal ;
-//   font-weight: normal ;
-//   src: url() format();
-// }
 
-// @font-face {
-//   font-family: ;
-//   font-style: normal;
-//   font-weight: bold;
-//   src: url() format();
-// }
+/* CSS HEX */
+$eerie-black: #222222ff;
+$star-command-blue: #337ab7ff;
+$onyx: #343742ff;
+$independence: #474b5aff;
+$dim-gray: #676a73ff;
+$sonic-silver: #777777ff;
+$gainsboro: #d4dae3ff;
+$platinum: #e5e5e5ff;
+$cultured: #f8f8faff;
+$safety-orange-blaze-orange: #ff6600ff;
 
-$font: 'Segoe UI', "Roberto", Verdana, sans-serif;
-$fontNormal: ""; 
-$fontBold: "";
-// $nav:;
-// $header:;
-// $button:;
-// $backgroundcolor:;
+$trueFont: "Flaticon";
 
-// .App {
-//   text-align: center;
-// }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  border-radius: 50%;
+.App{
+  font-family: "Flaticon", Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "";
+  font-style: normal ;
+  font-weight: normal ;
+  src: url("./scss/Fonts/fontawesome-webfont.eot"),
+  url(./scss/Fonts/fontawesome-webfont.woff) format("woff"),
+  url(./scss/Fonts/fontawesome-webfont.ttf) format("truetype"),
+  url(./scss/Fonts/fontawesome-webfont.svg) format("svg");
+  font-weight: normal;
+  font-style: normal;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
   color: white;
-}
+  font-size: 20px;
+  background-color: $safety-orange-blaze-orange;
+  padding: 8px 12px;
+  border: none;
 
-.App-link {
-  color: #61dafb;
+}
+button:hover{
+  background-color: $cultured;
+  color:$safety-orange-blaze-orange;
+  border: $safety-orange-blaze-orange;
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 
+
 // PUBLIC SCSS LINK
 @import './scss/Header.scss';
 @import './scss/Navbar.scss';
+@import './scss/SearchInput.scss';
+@import './scss/Forside.scss';
+@import './scss/Slider.scss';
+@import './scss/Omos.scss';
+@import './scss/VoresService.scss';
 
 // ADMIN SCSS LINK
 @import './scss/Admin/Admin.scss';
@@ -77,3 +78,5 @@ $fontBold: "";
 @import './scss/Admin/Loader.scss';
 @import './scss/Admin/ErrorMessage.scss';
 
+// Fonts
+@import './scss/Fonts/_flaticon';

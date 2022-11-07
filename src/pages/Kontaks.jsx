@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Contact = () => {
+const Kontakt = () => {
   return (
     <div>Contact</div>
   )
 }
 
-export default Contact
+export default Kontakt

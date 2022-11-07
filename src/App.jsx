@@ -1,12 +1,11 @@
 import './App.scss';
-import logo from './Sheldon_Cooper_Profile.webp';
 import {Route, Routes} from 'react-router-dom';
 
 // Public
 import Layout from './layout/Layout';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import About from './pages/About';
+import Forside from './pages/Forside';
+import Kontakt from './pages/Kontaks';
+import Omos from './pages/Omos';
 
 // Admin
 import AdminLayout from './admin/layout/AdminLayout';
@@ -34,9 +33,9 @@ function App () {
       <Routes>
       <Route path="/" element={<Layout />} >
         {/* Public */}
-          <Route index element={<Home />} />
-          <Route path="kontakt" element={<Contact />} />
-          <Route path="omos" element={<About />} />
+          <Route index element={<Forside />} />
+          <Route path="kontakt" element={<Kontakt />} />
+          <Route path="omos" element={<Omos />} />
           <Route path="login" element={<Login />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
@@ -54,24 +53,6 @@ function App () {
         </Route>
 
       </Routes>  
-     
-
-      {/* <header className="App-header">
-        <img src={ logo } className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          <br />
-          Be carefull. Sheldon Cooper might give a lecture if there is an error.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
     </div>
   );
 }

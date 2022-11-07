@@ -1,0 +1,46 @@
+.Header{
+    display: flex;
+    height: 100px;
+    background-color: $independence;
+    padding-top: 10px;
+    // justify-content: center;
+    justify-content: space-between;
+    padding-left: 25%;
+    padding-right: 25%;
+
+    .Image{
+        height: 120px;
+        img{
+            height:60px;
+            width: auto;
+        }
+    }
+
+    .location, .openTime, .number{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        padding-top: 1.5em;
+        color:$cultured;
+    }
+}
+
+@media (max-width:800px) {
+
+    .Header {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding-bottom: 20px;
+
+        .Image{
+            height: auto;
+        }
+
+        .location, .openTime, .number{
+            padding-top:1em;
+        }
+    }
+
+
+}

@@ -1,0 +1,20 @@
+.hjaelpfrastroem{
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom:40px ;
+    background-color: $onyx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color:$cultured;
+
+
+    span{
+        color:$safety-orange-blaze-orange;
+    }
+
+    button{
+        margin-top: 30px;
+        font-size: 15px;
+    }
+}
