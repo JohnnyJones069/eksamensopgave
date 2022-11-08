@@ -16,24 +16,12 @@ $gainsboro: #d4dae3ff;
 $platinum: #e5e5e5ff;
 $cultured: #f8f8faff;
 $safety-orange-blaze-orange: #ff6600ff;
+$reddish:rgb(225, 43, 43);
 
 $trueFont: "Flaticon";
 
 .App{
   font-family: "Flaticon", Arial, Helvetica, sans-serif;
-}
-
-@font-face {
-  font-family: "";
-  font-style: normal ;
-  font-weight: normal ;
-  src: url("./scss/Fonts/fontawesome-webfont.eot"),
-  url(./scss/Fonts/fontawesome-webfont.woff) format("woff"),
-  url(./scss/Fonts/fontawesome-webfont.ttf) format("truetype"),
-  url(./scss/Fonts/fontawesome-webfont.svg) format("svg");
-  font-weight: normal;
-  font-style: normal;
-
 }
 
 button {
@@ -71,6 +59,8 @@ button:hover{
 @import './scss/Slider.scss';
 @import './scss/Omos.scss';
 @import './scss/VoresService.scss';
+@import './scss/VoresKunder.scss';
+// @import './scss/Carousel.scss';
 
 // ADMIN SCSS LINK
 @import './scss/Admin/Admin.scss';

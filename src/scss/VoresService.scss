@@ -1,90 +1,89 @@
 .Overdiv {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .VoresServices {
-    margin-top: 30px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.VoresServiceHeader {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    margin-top: 100px;
+
+}
+
+.VoresServicesdiv {
+    margin: 5px;
     height: auto;
+    width: 80%;
 
-    .VoresServiceHeader{
-        height: auto;
+    .serviceinfotext{
+        width: 85%;
+        float: right
+    }
+    span{
+        font-size: 60px;
         float: left;
+        color:$safety-orange-blaze-orange;
     }
+    
+    
+    
+    h2 {
+        font-family: $trueFont, Arial, Helvetica, sans-serif;
+        color: $eerie-black;
+    }
+    
+    p {
+        font-family: $trueFont, Arial, Helvetica, sans-serif;
+    }
+}
 
-    .Service {
-        display: flex;
-        flex-direction: column;
-        font-family: 'Flaticon';
 
+
+.serviceimg {
+    grid-column: 3;
+    grid-row: 1 / span 3;
+
+    img {
+        margin-left: 30px;
+        margin-top: 100px;
     }
 }
 
-.serviceinfodiv{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-
-    .serviceinfo {
-        width: 40%;
-        height: 100px;
-
-        .serviceinfotext{
-            width: 70%;
-            float: right;
-        }
-        
-        span{
-            font-size: 60px;
-            
-        }
-    
-        h2 {
-            font-family: $trueFont, Arial, Helvetica, sans-serif;
-        }
-    
-        p {
-            font-family: $trueFont, Arial, Helvetica, sans-serif;
-        }
-    
-        .serviceimg {
-            flex-direction: row;
-            display: flex;
-            float: left;
-    
-            img {
-                margin-left: 30px;
-            }
-        }
-    }
-}
 
 .BookServiceNu {
     display: flex;
-    padding-left: 20%;
-    padding-right: 30%;
+    padding-left: 15%;
+    padding-right: 15%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     box-shadow: 0 0 11px rgba(33, 33, 33, .2);
     height: auto;
+    padding-bottom: 10px;
 
     h3 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     input {
-        margin-top: 0.7em;
-        height: 30px;
+        margin-top: 3em;
+        height: 40px;
         border-radius: 5px;
         border-color: rgb(226, 226, 226);
     }
 
     button {
-        height: 30px;
-        margin-top: 0.5em;
-        font-size: 13px;
+        height: 40px;
+        margin-top: 2em;
+        font-size: 20px;
         border-radius: 5px;
         padding-left: 15px;
         padding-right: 15px;

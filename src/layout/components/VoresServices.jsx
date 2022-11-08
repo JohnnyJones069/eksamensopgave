@@ -27,24 +27,22 @@ const VoresServices = () => {
     return (
         <div className='Overdiv'>
             <div className='VoresServices'>
-                <div className="Service">
                     <div className='VoresServiceHeader'>
                         <h1>Vores <span className='orange'>Services</span></h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime pariatur impedit expedita!</p>
                     </div>
-                    { service && service.map( ( s, i ) =>
-                        <div className='serviceinfodiv'>
-                            <div className="serviceinfo" key={ i }>
-                                <span className={ s.icon }></span>
-                                <div className='serviceinfotext'>
-                                    <h2>{ s.title }</h2>
-                                <p>{ s.teaser }</p>
-                                </div>
-                            </div>
+
+                    { service && service.map((s, i) => 
+                    <div className="VoresServicesdiv" key={i}>
+                        <span className={s.icon}></span>
+                        <div className="serviceinfotext">
+                            <h2>{s.title}</h2>
+                            <p>{s.teaser}</p>
                         </div>
+                    </div>
                     )
+
                     }
-                </div>
 
                 <div className="serviceimg">
                     <img src={ handylady } />

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { getSlider } from '../api/slider'
 import OmStrøm from '../layout/components/OmStrøm';
 import Slider from '../layout/components/Slider';
+import VoresKunderSiger from '../layout/components/VoresKunderSiger';
 import VoresServices from '../layout/components/VoresServices';
 // import Loader from '../components/Loader';
 // import ErrorMessage from '../components/ErrorMessage';
@@ -43,6 +44,7 @@ const Forside = () => {
         <button>KONTAKT OS</button>
       </div>
       <VoresServices />
+      <VoresKunderSiger />
     </div>
   )
 }
