@@ -1,0 +1,140 @@
+.Footer {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    background-color: $onyx ;
+    color: $gainsboro;
+    padding-top: 50px;
+    font-size: 15px;
+
+    .footerinfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: auto;
+        padding: 0 20em 100px 20em;
+    }
+
+    .footerabout {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 20%;
+
+        img {
+            width: 150px;
+            padding-bottom: 10px;
+        }
+
+    }
+
+    .footerlinks {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-decoration: none;
+
+        a:link {
+            text-decoration: none;
+            color: $gainsboro;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: $gainsboro;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: $gainsboro;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: $gainsboro;
+        }
+    }
+
+
+    .footerkontakt {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-decoration: none;
+    }
+
+    .footernyhedsbrev {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-decoration: none;
+
+        .tilmeld {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-decoration: none;
+
+            input {
+                border-radius: 8px;
+                height: 30px;
+            }
+
+            button{
+                font-size: 15px;
+                width: auto;
+                border-radius: 5px;
+                padding-top: 10px;
+                // padding-left: 100px;
+            }
+
+            button:hover{
+                background-color: transparent;
+                border: 1px solid $safety-orange-blaze-orange
+            }
+        }
+
+
+    }
+
+
+    .footerinfobottom {
+        border-top: $independence 1px solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 20em;
+
+        p {
+            margin-top: 5px;
+            color: $cultured;
+        }
+
+        span {
+            color: $safety-orange-blaze-orange;
+        }
+
+        div {
+            color: $cultured;
+        }
+    }
+
+    .footersocial {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        div {
+            width: 30px;
+            height: 30px;
+            padding: 6px;
+            border-radius: 50%;
+            border: 1px solid $cultured;
+            font-family: $iconFont;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { getSlider } from '../api/slider'
 import OmStrøm from '../layout/components/OmStrøm';
+import SidsteNyt from '../layout/components/SidsteNyt';
 import Slider from '../layout/components/Slider';
 import VoresKunderSiger from '../layout/components/VoresKunderSiger';
 import VoresServices from '../layout/components/VoresServices';
+import VoresTeam from '../layout/components/VoresTeam';
 // import Loader from '../components/Loader';
 // import ErrorMessage from '../components/ErrorMessage';
 
@@ -45,6 +47,8 @@ const Forside = () => {
       </div>
       <VoresServices />
       <VoresKunderSiger />
+      <VoresTeam />
+      <SidsteNyt />
     </div>
   )
 }

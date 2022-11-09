@@ -31,15 +31,16 @@ h2 {
         width: 100%;
         background-color: $cultured;
         color: $dim-gray;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transition: 0.3s;
         text-align: center;
         height: 100%;
+        box-shadow: none;
+        border:none;
       }
       
       .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        border: 1px solid rgb(121, 121, 121);
+        border: none;
       }
     img{
         border-radius: 50%;
@@ -57,11 +58,8 @@ h2 {
     }
 }
 
-.slick-slide {
-    margin: 10px;
-}
-
-.slick-slide img {
+.whitecoloumn{
     width: 100%;
-    border: 2px solid #fff;
+    height: 200px;
+    background-color:$platinum;
 }

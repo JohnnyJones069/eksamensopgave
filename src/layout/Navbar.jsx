@@ -31,7 +31,7 @@ const Navbar = () => {
           <li><NavLink to="service">SERVICE</NavLink></li>
           <li><NavLink to="faq">FAQ</NavLink></li>
           <li><NavLink to="nyheder">NYHEDER</NavLink></li>
-          <li><NavLink to="kontakt">KONTAKT OS</NavLink></li>
+          <li><NavLink to="kontaktos">KONTAKT OS</NavLink></li>
           <SearchInput />
           {
             //  Hvis der er en bruger i "global state/context"

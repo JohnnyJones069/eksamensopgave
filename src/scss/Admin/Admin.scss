@@ -143,8 +143,9 @@
   align-items: center;
   text-align: center;
   margin-top: 100px;
-
+  
   .nomatch-container > *{
+    color:$eerie-black;
     margin-top: 15px;
   }
   button{

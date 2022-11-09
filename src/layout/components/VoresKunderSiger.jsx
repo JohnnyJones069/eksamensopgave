@@ -46,18 +46,20 @@ const VoresKunderSiger = () => {
                 </div>
                 <Carousel wrapAround={true} slidesToShow={3} style={{overflowY:"visible", paddingTop:"60px", alignContent:"center"}} renderBottomCenterControls="none" renderCenterLeftControls="none" renderCenterRightControls="none">
                     { testimonial && randomizeArray( testimonial ).slice( 0, 4 ).map( ( t, i ) =>
-                    <div className='cardview'>
+                    <div className='cardview' key={i}>
                         <div className='card' key={ i }>
                             <img src={ "http://localhost:5333/images/testimonial/" + t.image } />
                             <h3>{ t.name }</h3>
                             <p className='title'>{ t.title }</p>
                             <p>{ t.review }</p>
                         </div>
-                    </div>
-                        
+                    </div>          
                     )
                     }
                 </Carousel>
+            </div>
+            <div className="whitecoloumn">
+                
             </div>
         </div>
     )

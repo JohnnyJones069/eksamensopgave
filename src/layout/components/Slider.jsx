@@ -67,7 +67,7 @@ const Slider = ( props ) => {
                             <div className="shadow"></div>
                             <div className="sliderFlexbox">
                                 { parser( s.caption ) }
-                                <Link to="/kontakt/">
+                                <Link to="/kontaktos/">
                                     <button>KONTAKT OS</button>
                                 </Link>
 

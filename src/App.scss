@@ -19,10 +19,24 @@ $safety-orange-blaze-orange: #ff6600ff;
 $reddish:rgb(225, 43, 43);
 
 $trueFont: "Flaticon";
+$iconFont:"fontawesome";
 
 .App{
   font-family: "Flaticon", Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: "fontawesome";
+  src: url("./scss/Fonts/fontawesome-webfont.eot");
+  src: url("./scss/Fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
+    url("./scss/Fonts/fontawesome-webfont.woff") format("woff"),
+    url("./scss/Fonts/fontawesome-webfont.ttf") format("truetype"),
+    url("./scss/Fonts/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 button {
   color: white;
@@ -30,6 +44,7 @@ button {
   background-color: $safety-orange-blaze-orange;
   padding: 8px 12px;
   border: none;
+  transition: ease 0.5s;
 
 }
 button:hover{
@@ -39,28 +54,72 @@ button:hover{
   cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
 
-  to {
-    transform: rotate(360deg);
+.breadcrumbsdiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 100px 20em 50px 20em;
+  align-items: center;
+
+  background-color: $platinum;
+
+  .breadcrumbs{
+      ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          text-align: center;
+      }
+      
+      ul > li {
+          display: inline-block;
+          vertical-align: top;
+          font-size: 15px;
+          line-height: 1;
+          color: $safety-orange-blaze-orange;
+      }
+      
+      ul > li:not(:last-child)::after {
+          content: '❯';
+          color: #789;
+      }
+      
+      
+      ul > li > a {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #789;
+          font-size: 15px;
+          line-height: 1;
+      }
+      
+      ul > li > a:hover {
+          text-decoration: underline;
+      }
+
+      ul > li > .current{
+          color:$safety-orange-blaze-orange;
+      }
   }
 }
+
 
 
 
 // PUBLIC SCSS LINK
 @import './scss/Header.scss';
 @import './scss/Navbar.scss';
+@import './scss/Footer.scss';
 @import './scss/SearchInput.scss';
 @import './scss/Forside.scss';
+@import './scss/Kontaktos.scss';
 @import './scss/Slider.scss';
 @import './scss/Omos.scss';
 @import './scss/VoresService.scss';
 @import './scss/VoresKunder.scss';
-// @import './scss/Carousel.scss';
+@import './scss/VoresTeam.scss';
+@import './scss/SidsteNyt.scss';
 
 // ADMIN SCSS LINK
 @import './scss/Admin/Admin.scss';

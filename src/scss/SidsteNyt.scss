@@ -1,0 +1,145 @@
+.SidsteNyt{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 250px;
+    margin-bottom: 150px;
+
+    button{
+        border-radius: 3px;
+        font-size: 15px;
+        padding:10px 20px;
+    }
+
+    button:hover{
+        border:1px solid $safety-orange-blaze-orange;
+        background-color: transparent;
+    }
+}
+
+.SidsteNytHeadline{
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    h2{
+        color: $eerie-black;
+    }
+}
+
+.NewsDisplay{
+    display: flex;
+    // justify-content: center;
+    flex-direction: row;
+    gap:50px;
+    margin-top: 50px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+.SidsteNytBox{
+    border-radius: 10px;
+    overflow: hidden;
+    width: 20%;
+    transition: ease 1s;
+    background-color: $cultured;
+
+
+    img{
+        width: 100%;
+    }
+
+    .SidsteNytText{
+        padding: 5px;
+    } 
+
+    .SidsteNytOverlay {
+        position: relative;
+
+        .bookmark {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+            .bookmarkleft {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 80px;
+                width: 15px;
+                border-top-left-radius: 5px;
+                border-left: 30px solid $safety-orange-blaze-orange;
+                border-bottom: 10px solid transparent;
+            }
+            .bookmarkright {
+                position: absolute;
+                left: 28px;
+                top: 0;
+                height: 80px;
+                width: 20px;
+                border-top-right-radius: 5px;
+                border-right: 30px solid $safety-orange-blaze-orange;
+                border-bottom: 10px solid transparent;
+            }
+            .bookmarkday {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 58px;
+                text-align: center;
+                font-size: 1.95rem;
+                color: #fff;
+            }
+            .bookmarkmonth {
+                position: absolute;
+                top: 35px;
+                left: 0;
+                width: 58px;
+                text-align: center;
+                font-size: 1.1rem;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.SidsteNytBox:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+// .bookmark{
+//     width: 70px;
+//     height: 70px;
+//     background-color: gray;
+// }
+
+
+// .bookmarkleft{
+//     width:0; 
+//     height: 0; 
+//     border-left: -10px solid transparent;
+//     border-right: 50px solid $safety-orange-blaze-orange;
+//     border-bottom: 50px solid transparent;
+//     position: absolute;
+//     margin-top:-100px;
+// }
+
+// .bookmarkright{
+//     width: 0; 
+//     height: 0; 
+//     border-left: 50px solid $safety-orange-blaze-orange;
+//     border-right: -10px solid transparent;
+//     border-bottom: 50px solid transparent;
+//     position: absolute;
+//     margin-top:-100px;
+// }
+
+// .bookmarkbottom{
+//     width: 0; 
+//     height: 0; 
+//     border-left:20px solid $safety-orange-blaze-orange;
+//     border-right: 30px solid $safety-orange-blaze-orange;
+//     border-bottom: 35px solid $safety-orange-blaze-orange;
+//     position: absolute;
+//     margin-top:-100px;
+// }

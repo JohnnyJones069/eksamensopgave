@@ -1,0 +1,41 @@
+.Kontakt {
+    margin-top: 50px;
+    .omosinfo {
+        display: flex;
+        flex-direction: row;
+        width: 65%;
+        margin: auto;
+        border: 1px solid $platinum;
+        padding: 25px;
+
+        .infobox {
+            width: 33%;
+            display: flex;
+            flex-direction: row;
+            width: 33%;
+            margin: auto;
+            border-right: 1px solid $platinum;
+            border-left:none;
+            padding: 25px;
+            gap:10px;
+            
+
+            .icon {
+                font-size: 25px;
+            }
+        
+
+            .info {
+
+            }
+        }
+
+        .infobox:last-of-type{
+            border: none;
+        }
+    }
+
+    .Kontaktosbox{
+        
+    }
+}

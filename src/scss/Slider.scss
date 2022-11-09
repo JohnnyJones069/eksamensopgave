@@ -91,13 +91,15 @@
             text-align: center;
             left:45%;
             z-index: 2;
+            border-radius: 5px;
             border:none;
             
         }
         button:hover{
-            background-color: $cultured;
+            background-color: transparent;
             color:$safety-orange-blaze-orange;
-            border: $safety-orange-blaze-orange;
+            border: 1px solid $safety-orange-blaze-orange;
+
             cursor: pointer;
         }
     }

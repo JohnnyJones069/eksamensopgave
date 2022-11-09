@@ -4,7 +4,7 @@ import {Route, Routes} from 'react-router-dom';
 // Public
 import Layout from './layout/Layout';
 import Forside from './pages/Forside';
-import Kontakt from './pages/Kontaks';
+import Kontaktos from './pages/Kontaktos';
 import Omos from './pages/Omos';
 
 // Admin
@@ -34,7 +34,7 @@ function App () {
       <Route path="/" element={<Layout />} >
         {/* Public */}
           <Route index element={<Forside />} />
-          <Route path="kontakt" element={<Kontakt />} />
+          <Route path="kontaktos" element={<Kontaktos />} />
           <Route path="omos" element={<Omos />} />
           <Route path="login" element={<Login />} />
           <Route path="*" element={<NoMatch />} />
