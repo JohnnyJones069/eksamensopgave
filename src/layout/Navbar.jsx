@@ -3,18 +3,25 @@ import { NavLink, Link } from 'react-router-dom';
 import Logout from '../admin/components/Logout';
 import SearchInput from './components/SearchImput';
 import { LoginContext } from '../admin/context/LoginContext'
+import { BiWinkSmile } from 'react-icons/bi';
+import { useEffect } from 'react';
 
 const Navbar = () => {
 
   // Hent "user" - for at se om der er logget ind
   const { user, } = useContext( LoginContext );
-
   const [showMenu, setShowMenu] = useState(false)
+  const [sticky, setSticky] = useState(false)
 
-
-
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 75);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
   return (
-    <nav className='Navbar'>
+    <nav className={`${sticky ? "sticky Navbar" : "Navbar"}`}>
 
       {/* Burgermenu */ }
       <div className={showMenu == true ? "burger-button open" : "burger-button"} onClick={() => setShowMenu(!showMenu)}>

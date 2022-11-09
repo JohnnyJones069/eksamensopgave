@@ -19,6 +19,7 @@ import AdminToursEdit from './admin/AdminPages/AdminTours/AdminToursEdit';
 import AdminAbout from './admin/AdminPages/AdminAbout';
 import AdminContact from './admin/AdminPages/AdminContact';
 import AdminFooter from './admin/AdminPages/AdminFooter';
+import ShowNyhed from './layout/components/ShowNyhed';
 
 
 
@@ -37,7 +38,8 @@ function App () {
           <Route index element={<Forside />} />
           <Route path="kontaktos" element={<Kontaktos />} />
           <Route path="omos" element={<Omos />} />
-          <Route path="nyheder" element={<Nyheder />} />new 
+          <Route path="nyheder" element={<Nyheder />} /> 
+          <Route path="nyheder/:ID" element={<ShowNyhed />} /> 
           <Route path="login" element={<Login />} />
           <Route path="*" element={<NoMatch />} />
         </Route>

@@ -3,6 +3,9 @@ import { getAllNews } from '../api/news';
 import Pagination from '../layout/components/Pagination';
 import Breadcrumbs from '../layout/components/Breadcrumbs';
 import { GoCalendar } from 'react-icons/go'
+import { FaComments } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
+import AsideComponent from '../layout/components/Aside';
 
 const listItems = [
     { title: 'Forside', link: '/' },
@@ -10,7 +13,7 @@ const listItems = [
 
 ]
 
-const Tours = () => {
+const Nyheder = () => {
 
     const [ error, setError ] = useState( false );
     const [ loading, setLoading ] = useState( false );
@@ -42,55 +45,47 @@ const Tours = () => {
             <div className="breadcrumbsdiv">
                 <Breadcrumbs list={ listItems } />
             </div>
-            { news &&
-                <>
-                    <div className='nyheder'>
+            <div className='wrapper'>
 
-                        <div className="NewsDisplay">
+                { news &&
+                    <>
+                        <div className='nyheder'>
 
-                            { news.slice( ( currentPage * itemsPerPage ), ( ( currentPage * itemsPerPage ) + itemsPerPage ) ).map( n =>
-                                <div className='SidsteNytBox' key={ n._id }>
-                                    <div className="SidsteNytOverlay">
-                                        <img src={ "http://localhost:5333/images/news/" + n.image } />
-                                        <div className="bookmark">
-                                            <span className="bookmarkleft"></span>
-                                            <span className="bookmarkright"></span>
-                                            <span className="bookmarkday">{ new Date( n.received ).toLocaleDateString( "en-GB", { day: "2-digit", } ) }</span>
-                                            <span className="bookmarkmonth">{ new Date( n.received ).toLocaleDateString( "en-GB", { month: "short" } ) }</span>
-                                        </div>
+                            <div className="newsWrapper">
+
+                                { news.slice( ( currentPage * itemsPerPage ), ( ( currentPage * itemsPerPage ) + itemsPerPage ) ).map( n =>
+                                    <div className="newsElement" key={ n._id }>
+                                        <Link className='normaltext' to={"/nyheder/" + n._id}>
+                                            <div className='newsBox'>
+                                                <div className="SidsteNytOverlay">
+                                                    <img src={ "http://localhost:5333/images/news/" + n.image } />
+                                                    <div className="bookmark">
+                                                        <span className="bookmarkleft"></span>
+                                                        <span className="bookmarkright"></span>
+                                                        <span className="bookmarkday">{ new Date( n.received ).toLocaleDateString( "en-GB", { day: "2-digit", } ) }</span>
+                                                        <span className="bookmarkmonth">{ new Date( n.received ).toLocaleDateString( "en-GB", { month: "short" } ) }</span>
+                                                    </div>
+                                                </div>
+                                                <article className="SidsteNytText">
+                                                    <h3>{ n.title }</h3>
+                                                    <p>{ n.content.slice( 0, 150 ) }...</p>
+                                                    <hr style={ { color: "#789", backgroundColor: "#789" } } />
+                                                    <p><FaComments /> { n.comments.length } kommentarer</p>
+                                                </article>
+                                            </div>
+                                        </Link>
                                     </div>
-                                    <article className="SidsteNytText">
-                                        <h3>{ n.title }</h3>
-                                        <p>{ n.content.slice( 0, 150 ) }...</p>
-                                        <hr style={ { color: "#789", backgroundColor: "#789" } } />
-                                    </article>
-                                </div>
-                            ) }
+                                ) }
+                            </div>
+                            <AsideComponent />
+
                         </div>
-                        <aside>
-                            <h3>Arkiv</h3>
-                            { news && news.slice( 0, 4 ).map( ( n ) =>
-                                <div className='asidecomponents'>
-                                    <img src={ "http://localhost:5333/images/news/" + n.image } />
-                                    <div className='txt'>
-                                        { n.title }
-                                        <div className="date">
-                                            <GoCalendar />
-                                            { new Date( n.received ).toLocaleDateString( "en-GB", { day: "2-digit", month: "short", year: "numeric" } ) }
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            ) }
-                        </aside>
-
-                    </div>
-                    <Pagination itemsPerPage={ itemsPerPage } itemsLength={ news.length } currentPage={ currentPage } setCurrentPage={ setCurrentPage } />
-                </>
-            }
+                        <Pagination itemsPerPage={ itemsPerPage } itemsLength={ news.length } currentPage={ currentPage } setCurrentPage={ setCurrentPage } />
+                    </>
+                }
+            </div>
         </div>
     )
 }
 
-export default Tours
+export default Nyheder
