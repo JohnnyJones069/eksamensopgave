@@ -5,6 +5,7 @@ import {Route, Routes} from 'react-router-dom';
 import Layout from './layout/Layout';
 import Forside from './pages/Forside';
 import Kontaktos from './pages/Kontaktos';
+import Nyheder from './pages/Nyheder';
 import Omos from './pages/Omos';
 
 // Admin
@@ -36,6 +37,7 @@ function App () {
           <Route index element={<Forside />} />
           <Route path="kontaktos" element={<Kontaktos />} />
           <Route path="omos" element={<Omos />} />
+          <Route path="nyheder" element={<Nyheder />} />new 
           <Route path="login" element={<Login />} />
           <Route path="*" element={<NoMatch />} />
         </Route>

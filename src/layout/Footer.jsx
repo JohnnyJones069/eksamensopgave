@@ -3,12 +3,17 @@ import { Link } from 'react-router-dom'
 import logo from './assets/img/logo.png'
 import { FaVine, FaLinkedinIn, FaTwitter, FaFacebookF, FaAngleRight } from 'react-icons/fa'
 import { getContactInformation } from '../api/contactinformation'
+import { createNewssubscription } from '../api/emailsubscription'
 
 const Footer = () => {
 
   const [ error, setError ] = useState( false );
   const [ loading, setLoading ] = useState( false );
   const [ contactinformation, setContactinformation ] = useState()
+  const [ content, setContent ] = useState()
+  const [ message, setMessage ] = useState()
+
+
 
   useEffect( () => {
     setLoading( true )
@@ -25,6 +30,28 @@ const Footer = () => {
         setLoading( false )
       } )
   }, [] )
+
+  const handleSubmit = ( e ) => {
+    e.preventDefault() // Forhindre reload af side
+    setLoading( true )
+
+    let formData = new FormData( e.target )
+    formData.append( "content", content );
+    createNewssubscription( formData )
+      .then( ( response ) => {
+        e.target.reset() // Tømmere formularfelterne
+        // setMessage( "ny tur er oprettet! id nummer: " + response.data._id )
+
+      } )
+      .catch( ( err ) => {
+        setError( true )
+        console.log( err )
+      } )
+      .finally( () => {
+        setLoading( false )
+      } )
+
+  }
 
   return (
     <div className='Footer'>
@@ -53,22 +80,24 @@ const Footer = () => {
         <div className="footernyhedsbrev">
           <h4>Nyhedsbrev</h4>
           <p>Tilmeld dig vores Nyhedsbrev her</p>
-          <div className="tilmeld">
-            <input type="email" />
-            <button>TILMELD</button>
-          </div>
+          <form onSubmit={ handleSubmit }>
+            <div className="tilmeld">
+              <input type="email" name='email' defaultValue="Din email" />
+              <button type='submit'>TILMELD</button>
+            </div>
+          </form>
         </div>
       </div>
       <div className="footerinfobottom">
         <p><span>Strøm</span> &copy; 2017 All Rights Reserved</p>
 
         <div className="footersocial">
-          {/* { contactinformation && */}
-            <div><FaFacebookF /></div>
-            <div><FaTwitter /></div>
-            <div><FaVine /></div>
-            <div><FaLinkedinIn /></div>
-          {/* } */}
+          {/* { contactinformation && */ }
+          <Link to="https://facebook/stroem-grenaa"><div><FaFacebookF /></div></Link>
+          <Link to="https://twitter.com/stroem-grenaa"><div><FaTwitter /></div></Link>
+          <Link to="https://vimeo.com/stroem-grenaa"><div><FaVine /></div></Link>
+          <Link to="https://linkedin.com/stroem-grenaa"><div><FaLinkedinIn /></div></Link>
+          {/* } */ }
         </div>
       </div>
     </div>

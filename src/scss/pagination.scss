@@ -1,0 +1,32 @@
+$safety-orange-blaze-orange: #ff6600ff;
+$cultured: #f8f8faff;
+$eerie-black: #222222ff;
+$independence: #474b5aff;
+$dim-gray: #676a73ff;
+$sonic-silver: #777777ff;
+
+.pagination{
+  margin-bottom: 50px;
+  margin-left: 230px;
+  button{
+    background-color: white;
+    color:$eerie-black;
+    border: 1px solid lightgray;
+    margin:3px;
+    font-size: 15px;
+    border-radius: 8px;
+
+  }
+  button:hover{
+    background-color: $safety-orange-blaze-orange;
+      color:$cultured;
+      border: 1px solid $safety-orange-blaze-orange;
+  }
+  .pagination-active {
+      background-color: $safety-orange-blaze-orange;
+      color:$cultured;
+      border:none;
+    }
+
+
+}

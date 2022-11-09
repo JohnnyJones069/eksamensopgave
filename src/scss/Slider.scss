@@ -28,7 +28,8 @@
         top: 50%;
         width: auto;
         margin-top: -22px;
-        padding: 16px;
+        height: 60px;
+        margin-right: 16px;
         color: $cultured;
         font-weight: bold;
         font-size: 60px;
@@ -41,13 +42,14 @@
     /* Position the "next button" to the right */
     .next {
         right: 0;
-        border-radius: 3px 0 0 3px;
+        border-radius: 50%;
     }
 
     /* On hover, add a black background color with a little bit see-through */
     .prev:hover,
     .next:hover {
         background-color: rgba(0, 0, 0, 0.8);
+
     }
 
     /* Caption shadow on Slider */

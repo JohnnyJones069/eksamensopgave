@@ -47,7 +47,6 @@ const SidsteNyt = () => {
                         <article className="SidsteNytText">
                         <h3>{n.title}</h3>
                         <p>{n.content.slice(0,150)}...</p>
-                        <p>{ new Date( n.received ).toLocaleDateString( "da", { day: "numeric", month: "long" } ) }</p>
                         </article>
                     </div>
                 )
