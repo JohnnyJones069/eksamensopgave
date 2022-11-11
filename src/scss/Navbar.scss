@@ -1,8 +1,4 @@
 .Navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
     color: black;
     position: absolute; //aht burger-buttons absolute-position
     padding: 0 1rem;
@@ -20,7 +16,7 @@
         display: none; //flex
         position: absolute;
         top: 0.75rem;
-        right: 1rem;
+        left: 1rem;
         flex-direction: column;
         justify-content: space-between;
         width: 30px;
@@ -54,34 +50,48 @@
 
     ul {
         background-color: $cultured;
-        width: auto;
+        width: 80%;
         display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
+        margin: auto;
+        padding: 5px;
         list-style-type: none;
         box-shadow: 1px 1px 10px 1px #fff;
+        justify-content: space-between;
+
+
+        div {
+            width:70%;
+            display: flex;
+            list-style-type: none;
+            box-shadow: 1px 1px 10px 1px #fff;
+            justify-content: flex-start;
+        }
 
         li {
 
             transition: all 0.5s ease;
 
-            &:hover {
-                background-color: rgba(0, 0, 0, 0.5);
-
-            }
-
             .active {
-                background-color: rgba(0, 0, 0, 0.5);
+                color: $safety-orange-blaze-orange;
             }
         }
 
         a {
             display: block;
             text-decoration: none;
-            color: black;
+            color: $eerie-black;
             padding: 1rem;
+
+            &:hover {
+                color: $safety-orange-blaze-orange;
+            }
+
+            .active {
+                color: $safety-orange-blaze-orange;
+            }
         }
+
+
 
         button {
             margin-top: 10px;
@@ -91,9 +101,13 @@
 
 }
 
-nav.sticky{
+nav.sticky {
     position: sticky;
-    top:0;
+    top: 0;
+}
+
+.Navbar.sticky {
+    background-color: white;
 }
 
 @media (max-width:800px) {
@@ -122,10 +136,41 @@ nav.sticky{
             width: 100%;
             flex-direction: column;
             height: auto;
+            gap:1px;
 
-            li {
-                text-align: center;
+
+
+
+                li {
+                    text-align: center;
+                    background-color:$independence ;
+                    &:hover{
+                        background-color: $safety-orange-blaze-orange;
+                        color:$cultured;
+                    }
+
+                    .active {
+                        background-color:$safety-orange-blaze-orange ;
+                        color:$cultured;
+                    }
+
+
+
+                    a {
+                        color:$cultured;
+            
+                        &:hover {
+                            color: $cultured;
+                        }
+            
+                        .active {
+                            color:$cultured;
+                            background-color: $safety-orange-blaze-orange;
+                        }
+                    }
+                    
             }
+
         }
 
     }

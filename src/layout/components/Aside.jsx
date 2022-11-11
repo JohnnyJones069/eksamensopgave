@@ -36,22 +36,25 @@ const AsideComponent = () => {
         <div>
             <aside>
                 <h3>Arkiv</h3>
-                { news && news.slice( 0, 4 ).map( ( n, i ) =>
-                    <Link to={ "/nyheder/" + n._id } className='normaltext' key={ i }>
-                        <div className='asidecomponents'>
-                            <img src={ "http://localhost:5333/images/news/" + n.image } />
-                            <div className='txt' key={ i }>
-                                { n.title }
-                                <div className="date" key={ i }>
-                                    <GoCalendar />
-                                    { new Date( n.received ).toLocaleDateString( "en-GB", { day: "2-digit", month: "short", year: "numeric" } ) }
+                { news && news.map( ( n, i ) =>
+                    <div>
+                        <Link to={ "/nyheder/" + n._id } className='normaltext' key={ i }>
+                            <div className='asidecomponents'>
+                                <img src={ "http://localhost:5333/images/news/" + n.image } />
+                                <div className='txt' key={ i }>
+                                    { n.title }
+                                    <div className="date" key={ i }>
+                                        <GoCalendar />
+                                        { new Date( n.received ).toLocaleDateString( "en-GB", { day: "2-digit", month: "short", year: "numeric" } ) }
+                                    </div>
                                 </div>
+
                             </div>
+                        </Link>
+                        <hr style={ { color: "#789", backgroundColor: "#789" } } />
+                    </div>
 
-                        </div>
-                    </Link>
-
-                ) }
+                ).reverse().slice( 4, ) }
             </aside>
         </div>
     )

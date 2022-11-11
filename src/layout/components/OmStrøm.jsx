@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getAbout } from '../../api/about'
+import parser from 'html-react-parser'
 // import Loader from '../components/Loader';
 // import ErrorMessage from '../components/ErrorMessage';
 
@@ -30,7 +31,7 @@ const Omstrøm = () => {
         { 
           about &&
           <div>
-            <h1>{about.title}</h1>
+            <h1>{parser(about.title)}</h1>
             <article>{about.teaser}</article>
           </div>
         }

@@ -13,14 +13,10 @@ export const getAbout = async () => {
   return res;
 };
 
-export const editAbout = async (data) => {
-  const getFormData = data =>
-    Object.keys(data).reduce((formData, key) => {
-      formData.append(key, data[key]);
-      return formData;
-    }, new FormData());
-
-    let res = await axios.put(baseUrl + 'about/admin', getFormData(data))
-    .then(res => {return res;})
-    .catch(err => {return err.response})
+export const editAbout = async ( data ) => {
+  let res = await axios.put(baseUrl + 'about/admin', data)
+  .then(res => {return res;})
+  .catch(err => {return err})
+  return res;
 }
+

@@ -1,0 +1,77 @@
+.service {
+    width: 70%;
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.vaelservice {
+    width: 30%;
+
+    .active {
+        background-color: $safety-orange-blaze-orange;
+        color: $cultured;
+    }
+}
+
+.vaelserviceinfo {
+    width: 65%;
+    // background-color: darkcyan;
+}
+
+.vaelgservicebox {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    padding: 10px;
+
+    
+}
+
+.vaelgservicebox .active {
+    background-color: $safety-orange-blaze-orange;
+    color: $cultured;
+}
+
+.vaelgservicebox:hover {
+    background-color: $safety-orange-blaze-orange;
+    color: $cultured;
+    transition: 0.5s ease;
+}
+
+.vaelgserviceimgbox{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.vaelservicetext {
+    color: $eerie-black;
+    margin-top: 20px;
+    list-style-type: none;
+
+
+    h2 {
+        color: $eerie-black;
+        margin-bottom: 20px;
+    }
+
+    ul{
+        list-style-type: none;
+
+    }
+
+    ol{
+        list-style-type: none;
+    }
+
+    p{
+        line-height: 1.2;
+        margin-top:10px;
+    }
+
+
+}

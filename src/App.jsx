@@ -20,6 +20,8 @@ import AdminAbout from './admin/AdminPages/AdminAbout';
 import AdminContact from './admin/AdminPages/AdminContact';
 import AdminFooter from './admin/AdminPages/AdminFooter';
 import ShowNyhed from './layout/components/ShowNyhed';
+import AccordionPage from './pages/AccordionPage';
+import Service from './pages/Service';
 
 
 
@@ -40,6 +42,8 @@ function App () {
           <Route path="omos" element={<Omos />} />
           <Route path="nyheder" element={<Nyheder />} /> 
           <Route path="nyheder/:ID" element={<ShowNyhed />} /> 
+          <Route path="faq" element={<AccordionPage />} />
+          <Route path="service" element={<Service />} />
           <Route path="login" element={<Login />} />
           <Route path="*" element={<NoMatch />} />
         </Route>

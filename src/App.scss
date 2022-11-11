@@ -45,12 +45,12 @@ button {
   padding: 8px 12px;
   border: none;
   transition: ease 0.5s;
-
+  border-radius: 7px;
 }
 button:hover{
-  background-color: $cultured;
+  background-color: transparent;
   color:$safety-orange-blaze-orange;
-  border: $safety-orange-blaze-orange;
+  border: 1px solid $safety-orange-blaze-orange;
   cursor: pointer;
 }
 
@@ -122,6 +122,8 @@ button:hover{
 @import './scss/SidsteNyt.scss';
 @import './scss/Nyheder.scss';
 @import './scss/ShowNyhed.scss';
+@import './scss/AccordionPage.scss';
+@import './scss/Service.scss';
 
 // ADMIN SCSS LINK
 @import './scss/Admin/Admin.scss';

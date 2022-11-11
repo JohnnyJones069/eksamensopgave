@@ -33,15 +33,15 @@ const SidsteNyt = () => {
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit unde aliquam quis.</p>
             </div>
             <div className='NewsDisplay'>
-                { news && news.slice(0,3).map( ( n, i ) =>
+                { news && news.map( ( n, i ) =>
                     <div className="SidsteNytBox" key={ i }>
                         <div className="SidsteNytOverlay">
                             <img src={ "http://localhost:5333/images/news/" + n.image } />
                             <div className="bookmark">
                                 <span className="bookmarkleft"></span>
                                 <span className="bookmarkright"></span>
-                                <span className="bookmarkday">{ new Date( n.received ).toLocaleDateString( "da", { day: "numeric" } ) }</span>
-                                <span className="bookmarkmonth">{ new Date( n.received ).toLocaleDateString( "da", { month: "short" } ) }</span>
+                                <span className="bookmarkday">{ new Date( n.received ).toLocaleDateString( "en-GB", { day: "numeric" } ) }</span>
+                                <span className="bookmarkmonth">{ new Date( n.received ).toLocaleDateString( "en-GB", { month: "short" } ) }</span>
                             </div>
                         </div>
                         <article className="SidsteNytText">
@@ -49,7 +49,7 @@ const SidsteNyt = () => {
                         <p>{n.content.slice(0,150)}...</p>
                         </article>
                     </div>
-                )
+                ).reverse().slice(0,3)
                 }
             </div>
             <Link to={"/nyheder"}>

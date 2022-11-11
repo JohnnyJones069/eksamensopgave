@@ -72,7 +72,7 @@ const AdminToursEdit = () => {
                                 </div>
                             </div>
                             <div className="ShowNyhedKommentar">
-                                <h3>Kommentaret ({ news.comments.length })</h3>
+                                <h3>Kommenteret ({ news.comments.length })</h3>
 
                                 { news && news.comments.map( ( s, i ) =>
                                     <div className='ShowNyhedKommentarElement'>

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom';
 import Carousel from 'nuka-carousel/lib/carousel';
 import { getAllTestimonial } from '../../api/testimonial'
-import { NextButton } from 'nuka-carousel';
-import { nextButtonDisabled } from 'nuka-carousel/lib/default-controls';
+
 
 const VoresKunderSiger = () => {
 

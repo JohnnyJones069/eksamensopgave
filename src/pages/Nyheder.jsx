@@ -53,7 +53,7 @@ const Nyheder = () => {
 
                             <div className="newsWrapper">
 
-                                { news.slice( ( currentPage * itemsPerPage ), ( ( currentPage * itemsPerPage ) + itemsPerPage ) ).map( n =>
+                                { news.map( n =>
                                     <div className="newsElement" key={ n._id }>
                                         <Link className='normaltext' to={"/nyheder/" + n._id}>
                                             <div className='newsBox'>
@@ -75,7 +75,8 @@ const Nyheder = () => {
                                             </div>
                                         </Link>
                                     </div>
-                                ) }
+                                ).reverse().slice( ( currentPage * itemsPerPage ), ( ( currentPage * itemsPerPage ) + itemsPerPage ) )
+                                }
                             </div>
                             <AsideComponent />
 

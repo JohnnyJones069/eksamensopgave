@@ -9,7 +9,6 @@ const VoresServices = () => {
     const [ loading, setLoading ] = useState( false );
     const [ service, setService ] = useState()
 
-    const [ booking, setBooking ] = useState()
     const [ content, setContent ] = useState()
     const [ message, setMessage ] = useState()
 
@@ -83,9 +82,9 @@ const VoresServices = () => {
                 </div>
                 <form onSubmit={ handleSubmit }>
 
-                    <input type="text" name='name' defaultValue="Dit navn" />
-                    <input type="email" name='email' defaultValue="Din Email" />
-                    <input type="nummer" name='phone' defaultValue="Dit nummer" />
+                    <input type="text" name='name' placeholder="Dit navn" />
+                    <input type="email" name='email' placeholder="Din Email" />
+                    <input type="nummer" name='phone' placeholder="Dit nummer" />
                     <button type='submit'>Send</button>
                 </form>
             </div>

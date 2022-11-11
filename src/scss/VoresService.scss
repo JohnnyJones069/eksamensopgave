@@ -61,8 +61,8 @@
 
 .BookServiceNu {
     display: flex;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 11%;
+    padding-right: 11%;
     flex-direction: row;
     justify-content: space-evenly;
     box-shadow: 0 0 11px rgba(33, 33, 33, .2);
@@ -78,6 +78,7 @@
         height: 40px;
         border-radius: 5px;
         border-color: rgb(226, 226, 226);
+        margin-right: 50px;
     }
 
     button {

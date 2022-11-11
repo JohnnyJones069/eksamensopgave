@@ -75,6 +75,7 @@ const Footer = () => {
             </div>
             <p><b>Telefon:</b> { contactinformation.phone }</p>
             <p><b>Email:</b> { contactinformation.email }</p>
+            <p><b>CVR :</b> { contactinformation.cvr }</p>
           </div>
         }
         <div className="footernyhedsbrev">
@@ -82,7 +83,7 @@ const Footer = () => {
           <p>Tilmeld dig vores Nyhedsbrev her</p>
           <form onSubmit={ handleSubmit }>
             <div className="tilmeld">
-              <input type="email" name='email' defaultValue="Din email" />
+              <input type="email" name='email' placeholder='Din Email' />
               <button type='submit'>TILMELD</button>
             </div>
           </form>
@@ -93,10 +94,10 @@ const Footer = () => {
 
         <div className="footersocial">
           {/* { contactinformation && */ }
-          <Link to="https://facebook/stroem-grenaa"><div><FaFacebookF /></div></Link>
-          <Link to="https://twitter.com/stroem-grenaa"><div><FaTwitter /></div></Link>
-          <Link to="https://vimeo.com/stroem-grenaa"><div><FaVine /></div></Link>
-          <Link to="https://linkedin.com/stroem-grenaa"><div><FaLinkedinIn /></div></Link>
+          <Link to="https://facebook/stroem-grenaa"><div className='socialmediaicon'><FaFacebookF /></div></Link>
+          <Link to="https://twitter.com/stroem-grenaa"><div className='socialmediaicon'><FaTwitter /></div></Link>
+          <Link to="https://vimeo.com/stroem-grenaa"><div className='socialmediaicon'><FaVine /></div></Link>
+          <Link to="https://linkedin.com/stroem-grenaa"><div className='socialmediaicon'><FaLinkedinIn /></div></Link>
           {/* } */ }
         </div>
       </div>

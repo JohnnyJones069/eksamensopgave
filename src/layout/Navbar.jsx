@@ -10,36 +10,37 @@ const Navbar = () => {
 
   // Hent "user" - for at se om der er logget ind
   const { user, } = useContext( LoginContext );
-  const [showMenu, setShowMenu] = useState(false)
-  const [sticky, setSticky] = useState(false)
+  const [ showMenu, setShowMenu ] = useState( false )
+  const [ sticky, setSticky ] = useState( false )
 
-  useEffect(() => {
+  useEffect( () => {
     const handleScroll = () => {
-      setSticky(window.scrollY > 75);
+      setSticky( window.scrollY > 75 );
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
+    window.addEventListener( "scroll", handleScroll );
+    return () => window.removeEventListener( "scroll", handleScroll );
+  } );
   return (
-    <nav className={`${sticky ? "sticky Navbar" : "Navbar"}`}>
+    <nav className={ `${ sticky ? "sticky Navbar" : "Navbar" }` }>
 
       {/* Burgermenu */ }
-      <div className={showMenu == true ? "burger-button open" : "burger-button"} onClick={() => setShowMenu(!showMenu)}>
+      <div className={ showMenu == true ? "burger-button open" : "burger-button" } onClick={ () => setShowMenu( !showMenu ) }>
         <span className="bar bar1"></span>
         <span className="bar bar2"></span>
         <span className="bar bar3"></span>
       </div>
+            <SearchInput />
 
-      <div className={showMenu === true ? "navbar-container active" : "navbar-container"}>
+      <div className={ showMenu === true ? "navbar-container active" : "navbar-container" }>
         <ul>
           {/* end tilføjet for at ungå at Home er .aktiv konstant */ }
-          <li><NavLink to="/" end>FORSIDE</NavLink></li>
-          <li><NavLink to="omos">OM OS</NavLink></li>
-          <li><NavLink to="service">SERVICE</NavLink></li>
-          <li><NavLink to="faq">FAQ</NavLink></li>
-          <li><NavLink to="nyheder">NYHEDER</NavLink></li>
-          <li><NavLink to="kontaktos">KONTAKT OS</NavLink></li>
-          <SearchInput />
+
+            <li><NavLink to="/" end>FORSIDE</NavLink></li>
+            <li><NavLink to="omos">OM OS</NavLink></li>
+            <li><NavLink to="service">SERVICE</NavLink></li>
+            <li><NavLink to="faq">FAQ</NavLink></li>
+            <li><NavLink to="nyheder">NYHEDER</NavLink></li>
+            <li><NavLink to="kontaktos">KONTAKT OS</NavLink></li>
           {
             //  Hvis der er en bruger i "global state/context"
             user ?

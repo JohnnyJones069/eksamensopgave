@@ -48,8 +48,8 @@
         }
 
         a:hover {
-            text-decoration: underline;
-            color: $gainsboro;
+            text-decoration: none;
+            color: $safety-orange-blaze-orange;
         }
 
         a:active {
@@ -84,6 +84,10 @@
                 background-color: $independence;
                 padding-left: 5px;
                 box-shadow: none !important;
+
+            }
+            ::placeholder{
+                color:$eerie-black;
             }
 
             button{
@@ -123,12 +127,26 @@
         div {
             color: $cultured;
         }
+
     }
 
     .footersocial {
         display: flex;
         flex-direction: row;
         gap: 10px;
+
+        .socialmediaicon:hover{
+            border:1px solid $safety-orange-blaze-orange;
+            border-radius: 50%;
+            color:$safety-orange-blaze-orange;
+            background-color: $cultured;
+            transition: .5s ease;
+        }
+        a:hover{
+            border: none;
+            background-color: transparent;
+            color:none;
+        }
 
         div {
             width: 30px;
@@ -138,6 +156,8 @@
             border: 1px solid $cultured;
             font-family: $iconFont;
             cursor: pointer;
+
+
         }
     }
 }

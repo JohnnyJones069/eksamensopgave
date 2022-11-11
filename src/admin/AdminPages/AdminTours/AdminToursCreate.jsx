@@ -30,6 +30,7 @@ const AdminToursCreate = () => {
 
         let formData = new FormData( e.target )
         formData.append( "content", content );
+        formData.append( "roomtype", roomtype );
 
 
 

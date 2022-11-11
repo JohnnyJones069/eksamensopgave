@@ -13,14 +13,18 @@ export const getService = async () => {
   return res;
 };
 
-export const editService = async (data) => {
-  const getFormData = data =>
-    Object.keys(data).reduce((formData, key) => {
-      formData.append(key, data[key]);
-      return formData;
-    }, new FormData());
-
-    let res = await axios.put(baseUrl + 'service/admin', getFormData(data))
+  // PUT - ret Service
+  export const editService = async (updatedService, serviceID) => {
+    let res = await axios.put(baseUrl + "service/admin/" + serviceID, updatedService )
     .then(res => {return res;})
-    .catch(err => {return err.response})
+    .catch(err => {return err})
+    return res;
+}
+
+
+export const getServiceID = async (ID) => {
+  let res = await axios.get(baseUrl + 'service/' + ID)
+  .then(res => {return res;})
+  .catch(err => {return err})
+  return res;
 }

@@ -1,5 +1,6 @@
 .Omstrøm{
-    margin-top: 20px;
+    margin-top: 70px;
+    margin-bottom: 100px;
     width: 100%;
     height: auto;
     display: flex;
@@ -13,4 +14,73 @@
         font-size: 15px;
     }
 
+    span{
+        color:$safety-orange-blaze-orange;
+    }
+}
+
+.Omos{
+    width: 100%;
+}
+
+.AboutStroem{
+    width: 67%;
+    margin:auto;
+}
+
+.about-stroem-headlinetext{
+    width: 100%;
+    text-align: center;
+    p{
+        color:$dim-gray;
+    }
+    span{
+        color:$safety-orange-blaze-orange;
+    }
+}
+
+.about-stroem-undertext{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    gap:50px;
+    margin-top:50px;
+}
+
+.about-stroem-undertext-textelement{
+    width:48.5%;
+    // background-color: aliceblue;
+    color:$dim-gray;
+
+    p{
+        margin-bottom: 30px;
+
+        strong{
+            font-size: 25px;
+        }
+    }
+    ul{
+        list-style-type:circle;
+        margin-left:25px;
+
+        ::marker{
+            font-size:1.7em;
+            vertical-align:text-bottom ;
+        }
+    }
+
+    button{
+        margin-top:30px;
+        font-size: 15px;
+        padding:15px 30px;
+    }
+}
+
+.about-stroem-undertext-imageelement{
+    width: 48.5%;
+    // background-color: antiquewhite;
+    border-radius: 10px;
+    overflow: hidden;
+    // height: 300px;
 }
