@@ -14,7 +14,6 @@ const AdminLayout = () => {
 
   return (
     <div className='AdminLayout'>
-
       <div className='Admin-container'>
         <AdminNavbar />
         <Outlet />

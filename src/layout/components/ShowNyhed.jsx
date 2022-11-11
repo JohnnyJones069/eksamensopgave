@@ -84,7 +84,6 @@ const AdminToursEdit = () => {
                                 }
                             </div>
 
-
                             <div className="SkrivEnKommentar">
                                 <hr style={ { color: "#789", backgroundColor: "#789", margin: "20px" } } />
                                 <h3>Skriv en kommentar</h3>

@@ -55,10 +55,10 @@ const Nyheder = () => {
 
                                 { news.map( n =>
                                     <div className="newsElement" key={ n._id }>
-                                        <Link className='normaltext' to={"/nyheder/" + n._id}>
+                                        <Link className='normaltext' to={ "/nyheder/" + n._id }>
                                             <div className='newsBox'>
                                                 <div className="SidsteNytOverlay">
-                                                    <img src={ "http://localhost:5333/images/news/" + n.image } />
+                                                    <img src={ "http://localhost:5333/images/news/" + n.image } alt="Nyhed foto" />
                                                     <div className="bookmark">
                                                         <span className="bookmarkleft"></span>
                                                         <span className="bookmarkright"></span>
@@ -78,7 +78,7 @@ const Nyheder = () => {
                                 ).reverse().slice( ( currentPage * itemsPerPage ), ( ( currentPage * itemsPerPage ) + itemsPerPage ) )
                                 }
                             </div>
-                            <AsideComponent />
+                            <AsideComponent className="DontBeSeen" />
 
                         </div>
                         <Pagination itemsPerPage={ itemsPerPage } itemsLength={ news.length } currentPage={ currentPage } setCurrentPage={ setCurrentPage } />

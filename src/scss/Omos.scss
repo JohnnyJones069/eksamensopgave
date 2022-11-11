@@ -1,4 +1,4 @@
-.Omstrøm{
+.OmStroem {
     margin-top: 70px;
     margin-bottom: 100px;
     width: 100%;
@@ -7,80 +7,116 @@
     align-items: center;
     flex-direction: column;
     padding-left: 20%;
-    padding-right:20% ;
+    padding-right: 20%;
     text-align: center;
 
-    button{
+    p {
+        color: $dim-gray;
+        line-height: 1.3em;
+    }
+
+
+    button {
         font-size: 15px;
     }
 
-    span{
-        color:$safety-orange-blaze-orange;
+    span {
+        color: $safety-orange-blaze-orange;
     }
 }
 
-.Omos{
+.Omos {
     width: 100%;
 }
 
-.AboutStroem{
+.AboutStroem {
     width: 67%;
-    margin:auto;
+    margin: auto;
 }
 
-.about-stroem-headlinetext{
+.about-stroem-headlinetext {
     width: 100%;
     text-align: center;
-    p{
-        color:$dim-gray;
+    margin-top: 70px;
+
+    p {
+        color: $dim-gray;
     }
-    span{
-        color:$safety-orange-blaze-orange;
+
+    span {
+        color: $safety-orange-blaze-orange;
     }
 }
 
-.about-stroem-undertext{
+.about-stroem-undertext {
     width: 100%;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: center;
-    gap:50px;
-    margin-top:50px;
+    gap: 50px;
+    margin-top: 50px;
 }
 
-.about-stroem-undertext-textelement{
-    width:48.5%;
+.about-stroem-undertext-textelement {
+    width: 48.5%;
     // background-color: aliceblue;
-    color:$dim-gray;
+    color: $dim-gray;
 
-    p{
+    p {
         margin-bottom: 30px;
 
-        strong{
+        strong {
             font-size: 25px;
         }
     }
-    ul{
-        list-style-type:circle;
-        margin-left:25px;
 
-        ::marker{
-            font-size:1.7em;
-            vertical-align:text-bottom ;
+    ul {
+        list-style-type: circle;
+        margin-left: 25px;
+
+        ::marker {
+            font-size: 1.7em;
+            vertical-align: text-bottom;
         }
     }
 
-    button{
-        margin-top:30px;
+    button {
+        margin-top: 30px;
         font-size: 15px;
-        padding:15px 30px;
+        padding: 15px 30px;
     }
 }
 
-.about-stroem-undertext-imageelement{
+.about-stroem-undertext-imageelement {
     width: 48.5%;
     // background-color: antiquewhite;
     border-radius: 10px;
     overflow: hidden;
     // height: 300px;
+}
+
+@media screen and (max-width:800px) {
+    .OmStroem {
+        padding-left: 5%;
+        padding-right: 5%;
+
+        button {
+            font-size: 13px;
+        }
+    }
+
+    .about-stroem-undertext {
+        flex-direction: column;
+        justify-content: center;
+
+        .about-stroem-undertext-textelement {
+            width: 100%;
+        }
+
+        .about-stroem-undertext-imageelement {
+            width: 100%;
+        }
+
+
+    }
 }

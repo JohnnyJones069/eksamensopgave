@@ -16,6 +16,7 @@
         justify-content: space-between;
         width: auto;
         padding: 0 20em 100px 20em;
+        flex-wrap: wrap;
     }
 
     .footerabout {
@@ -86,11 +87,12 @@
                 box-shadow: none !important;
 
             }
-            ::placeholder{
-                color:$eerie-black;
+
+            ::placeholder {
+                color: $eerie-black;
             }
 
-            button{
+            button {
                 font-size: 15px;
                 width: 50%;
                 border-radius: 5px;
@@ -98,7 +100,7 @@
                 // padding-left: 100px;
             }
 
-            button:hover{
+            button:hover {
                 background-color: transparent;
                 border: 1px solid $safety-orange-blaze-orange
             }
@@ -135,17 +137,18 @@
         flex-direction: row;
         gap: 10px;
 
-        .socialmediaicon:hover{
-            border:1px solid $safety-orange-blaze-orange;
+        .socialmediaicon:hover {
+            border: 1px solid $safety-orange-blaze-orange;
             border-radius: 50%;
-            color:$safety-orange-blaze-orange;
+            color: $safety-orange-blaze-orange;
             background-color: $cultured;
             transition: .5s ease;
         }
-        a:hover{
+
+        a:hover {
             border: none;
             background-color: transparent;
-            color:none;
+            color: none;
         }
 
         div {
@@ -160,4 +163,107 @@
 
         }
     }
+}
+
+@media screen and (max-width:800px) {
+    .Footer{
+
+        .footerinfo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            padding: 0 5% 0 5% !important;
+    
+            .footerabout {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                width: 100%;
+    
+            }
+    
+            .footerlinks {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                text-decoration: none;
+                margin-top: 20px;
+    
+                a:link {
+                    text-decoration: none;
+                    color: $gainsboro;
+                }
+    
+                a:visited {
+                    text-decoration: none;
+                    color: $gainsboro;
+                }
+    
+                a:hover {
+                    text-decoration: none;
+                    color: $safety-orange-blaze-orange;
+                }
+    
+                a:active {
+                    text-decoration: none;
+                    color: $gainsboro;
+                }
+            }
+    
+            .footerkontakt {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                text-decoration: none;
+                margin-top: 30px;
+            }
+    
+            .footernyhedsbrev {
+                display: flex;
+                // flex-direction: column;
+                text-decoration: none;
+                margin-top: 30px;
+                width: 100%;
+    
+                .tilmeld {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    text-decoration: none;
+                    margin-bottom: 20px;
+    
+                    input {
+                        width: 100%;
+                        border:none;
+    
+                    }
+    
+                    ::placeholder {
+                        color: $eerie-black;
+                    }
+    
+                    button {
+                        font-size: 11px !important;
+                        width:15%;
+                        border-radius: 5px;
+                        padding-top: 10px;
+                        // padding-left: 100px;
+                    }
+                }
+            }
+    
+        }
+        .footerinfobottom {
+            padding:5px!important;
+        }
+    }
+}
+
+@media screen and (max-width:425px){
+
+    button{
+        width: 20%;
+    }
+    
 }

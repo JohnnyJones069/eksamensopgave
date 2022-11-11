@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import parser from 'html-react-parser';
-import backIcon from '../assets/img/icons/play-icon.png';
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 
@@ -68,7 +67,7 @@ const Slider = ( props ) => {
                             <div className="sliderFlexbox">
                                 { parser( s.caption ) }
                                 <Link to="/kontaktos/">
-                                    <button>KONTAKT OS</button>
+                                    <button className='sliderbutton'>KONTAKT OS</button>
                                 </Link>
 
                             </div>

@@ -191,3 +191,18 @@
     }
 
 }
+
+
+@media screen and (max-width:800px) {
+    .ShowNyhedID{
+        padding:0 5%;
+    }
+    .ShowNyhedFlex{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    aside{
+        width: 90%;
+    }
+}

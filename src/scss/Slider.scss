@@ -1,8 +1,9 @@
 .Slider {
-  
+
     /* Slideshow container */
     .slideshow-container {
-        min-width: 1000px;
+        min-width: 300px;
+        min-height: 500px;
         height: auto;
         position: relative;
         margin: auto;
@@ -11,11 +12,15 @@
     /* Hide the images by default */
     .mySlides {
         display: none;
-        
-        img{
-            width: 100%;
-            height: 100%;
+        height: 100%;
+
+        img {
+            // width: 100%;
+            min-height: 500px;
+            min-width: 300px;
             object-fit: cover;
+            object-position: center;
+
         }
 
     }
@@ -39,9 +44,13 @@
         z-index: 2;
     }
 
+    .prev{
+        left:2%;
+        border-radius:50%;
+    }
     /* Position the "next button" to the right */
     .next {
-        right: 0;
+        right: 2%;
         border-radius: 50%;
     }
 
@@ -53,8 +62,8 @@
     }
 
     /* Caption shadow on Slider */
-    .shadow{
-        top:0;
+    .shadow {
+        top: 0;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.50);
@@ -62,10 +71,12 @@
         position: absolute;
     }
 
-    .sliderFlexbox{
+    .sliderFlexbox {
         display: flex;
         align-items: center;
-        p{
+        flex-direction: column;
+
+        p {
             font-size: 20px;
             color: $cultured;
             padding: 8px 12px;
@@ -73,53 +84,71 @@
             top: 35%;
             width: auto;
             text-align: center;
-            left:40%;
+            left: 0;
+            right: 0;
             z-index: 2;
-    
-            span{
+
+            span {
                 font-size: 60px;
             }
-    
+
         }
-    
-        button{
-            color: white;
-            font-size: 20px;
-            background-color: $safety-orange-blaze-orange;
+
+
+
+        a {
+            // color: white;
+            // background-color: $safety-orange-blaze-orange;
             padding: 8px 12px;
             position: absolute;
             top: 55%;
-            width: auto;
-            text-align: center;
-            left:45%;
             z-index: 2;
             border-radius: 5px;
-            border:none;
-            
+            border: none;
         }
-        button:hover{
-            background-color: transparent;
-            color:$safety-orange-blaze-orange;
-            border: 1px solid $safety-orange-blaze-orange;
 
+        .sliderbutton {
+            border:none;
+            background-color: none;
+            font-size: 15px;
+            left: 0;
+            right: 0;
+        }
+
+        a:hover .sliderbutton:hover{
+            background-color: transparent;
+            color: $safety-orange-blaze-orange;
+            border: 1px solid $safety-orange-blaze-orange;
             cursor: pointer;
+        
         }
     }
+}
 
-    
-    /* Fading animation */
-    // .fade {
-    //     animation-name: fade;
-    //     animation-duration: 1.5s;
-    // }
+@media screen and (max-width:800px) {
+    .Slider {
 
-    // @keyframes fade {
-    //     from {
-    //         opacity: .4
-    //     }
 
-    //     to {
-    //         opacity: 1
-    //     }
-    // }
+        .sliderFlexbox {
+
+            p {
+                font-size: 15px;
+                position: absolute;
+
+
+                span {
+                    font-size: 30px;
+                }
+            }
+
+            a {
+                top: 60%;
+            }
+
+            .sliderbutton {
+                font-size: 20px;
+            }
+        }
+
+    }
 }

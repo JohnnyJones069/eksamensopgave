@@ -1,5 +1,5 @@
 .Overdiv {
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .VoresServices {
@@ -93,4 +93,53 @@
 
 .orange {
     color: $safety-orange-blaze-orange
+}
+
+@media screen and (max-width:800px) {
+
+    .VoresServices{
+        display: flex;
+        flex-direction: column;
+
+        .VoresServiceHeader{
+            margin-bottom: 35px;
+        }
+
+        .VoresServicesdiv{
+            margin:0;
+            width: 90%;
+
+            .serviceinfotext{
+                width: 80%;
+                float: right;
+                margin-bottom: 50px;
+            }
+            span{
+                font-size: 60px;
+                float: left;
+                color:$safety-orange-blaze-orange;
+            }
+
+        }
+
+    }
+
+    .BookServiceNu{
+        flex-direction: column; 
+        padding:0 10% 0 10%;
+        input{
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .text{
+            padding-bottom: 10px;
+
+        }
+    }
+    
+    .serviceimg {
+        display: none;
+    }
+    
+    
 }

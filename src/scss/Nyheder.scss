@@ -27,6 +27,7 @@
         margin-top: 50px;
         justify-content: center;
         margin-right: 30px;
+
         .newsElement {
             padding-left: calc(1.25rem * .5);
             padding-right: calc(1.25rem * .5);
@@ -49,8 +50,8 @@
         .SidsteNytText {
             padding: 5px;
 
-            p{
-                padding:10px;
+            p {
+                padding: 10px;
             }
 
         }
@@ -136,12 +137,49 @@
             flex-direction: row;
         }
 
-        
+
 
     }
 }
 
-.normaltext{
+.normaltext {
     text-decoration: none;
-    color:$eerie-black;
+    color: $eerie-black;
+}
+
+@media screen and (max-width:800px) {
+    .wrapper {
+        width: 100%;
+        padding: 0;
+    }
+
+    .nyheder {
+        flex-direction: column;
+
+        .newsWrapper {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-top: 50px;
+            justify-content: center;
+            margin-right: 30px;
+
+            .newsElement {
+                padding-left: calc(1.25rem * .5);
+                padding-right: calc(1.25rem * .5);
+                width: 100%;
+                margin-top: 2em;
+            }
+        }
+    }
+
+
+    .DontBeSeen {
+        display: none;
+    }
+
+    .BeSeen {
+        display: block;
+    }
 }

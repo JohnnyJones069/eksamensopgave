@@ -17,7 +17,6 @@ const SearchInput = () => {
         <form className='Searchinput'> 
             <input type="text" name="inpSearch" placeholder='Søg' />
             <button type="submit"><BiSearch /></button>
-
         </form>
     )
 }

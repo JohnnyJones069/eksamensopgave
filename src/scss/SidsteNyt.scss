@@ -1,43 +1,44 @@
-.SidsteNyt{
+.SidsteNyt {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 250px;
     margin-bottom: 150px;
 
-    button{
+    button {
         border-radius: 3px;
         font-size: 15px;
-        padding:10px 20px;
+        padding: 10px 20px;
     }
 
-    button:hover{
-        border:1px solid $safety-orange-blaze-orange;
+    button:hover {
+        border: 1px solid $safety-orange-blaze-orange;
         background-color: transparent;
     }
 }
 
-.SidsteNytHeadline{
+.SidsteNytHeadline {
     text-align: center;
     border-radius: 10px;
     overflow: hidden;
-    h2{
+
+    h2 {
         color: $eerie-black;
     }
 }
 
-.NewsDisplay{
+.NewsDisplay {
     display: flex;
     // justify-content: center;
     flex-direction: row;
-    gap:50px;
+    gap: 50px;
     margin-top: 50px;
     justify-content: center;
     margin-bottom: 50px;
 
 }
 
-.SidsteNytBox{
+.SidsteNytBox {
     border-radius: 10px;
     overflow: hidden;
     width: 25%;
@@ -45,13 +46,13 @@
     background-color: $cultured;
 
 
-    img{
+    img {
         width: 100%;
     }
 
-    .SidsteNytText{
+    .SidsteNytText {
         padding: 5px;
-    } 
+    }
 
     .SidsteNytOverlay {
         position: relative;
@@ -71,6 +72,7 @@
                 border-left: 30px solid $safety-orange-blaze-orange;
                 border-bottom: 10px solid transparent;
             }
+
             .bookmarkright {
                 position: absolute;
                 left: 28px;
@@ -81,6 +83,7 @@
                 border-right: 30px solid $safety-orange-blaze-orange;
                 border-bottom: 10px solid transparent;
             }
+
             .bookmarkday {
                 position: absolute;
                 top: 0;
@@ -90,6 +93,7 @@
                 font-size: 1.95rem;
                 color: #fff;
             }
+
             .bookmarkmonth {
                 position: absolute;
                 top: 35px;
@@ -103,6 +107,20 @@
     }
 }
 
-.SidsteNytBox:hover{
+.SidsteNytBox:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width:800px) {
+    .NewsDisplay {
+        flex-direction: column;
+        justify-content: center;
+
+        .SidsteNytBox {
+            width: 90%;
+            margin: auto;
+            cursor: pointer;
+        }
+
+    }
 }

@@ -1,13 +1,14 @@
 .Login {
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
   
     .login-container {
       width: auto;
       padding: 20px;
       border: 1px solid rgb(166, 166, 166);
       border-radius: 3px;
-      background-color: lightgray;
+      background-color:$cultured ;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       margin-top: 30px;
     }

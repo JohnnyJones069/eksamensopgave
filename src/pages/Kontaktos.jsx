@@ -111,15 +111,15 @@ const Kontaktos = () => {
           <form onSubmit={ handleSubmit }>
             <div className="kontaktformular">
               <div className="basikinfo">
-                <input type="text" name='name' defaultValue="Dit navn" />
-                <input type="email" name='email' defaultValue="Din email" />
-                <input type="text" name='phone' defaultValue="Dit nummer" />
+                <input type="text" name='name' placeholder="Dit navn" />
+                <input type="email" name='email' placeholder="Din email" />
+                <input type="text" name='phone' placeholder="Dit nummer" />
               </div>
               <div className="kontaktbesked">
-                <textarea name='message' defaultValue="Din besked" />
+                <textarea name='message' placeholder="Din besked" />
               </div>
             </div>
-            <button type='submit'>SEND BESKED</button>
+            <button className='kontaktbutton' type='submit'>SEND BESKED</button>
           </form>
 
         </div>

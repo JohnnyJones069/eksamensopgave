@@ -61,7 +61,7 @@ const Footer = () => {
           <p>Som medlem af Elinstallatørernes Landsorganisation, ELFO, er vi tilsluttet et ankerværn og en garantiordning</p>
         </div>
         <div className="footerlinks">
-          <h4>Link</h4>
+          <h3>Link</h3>
           <Link to="faq"><FaAngleRight />FAQ</Link>
           <Link to="omos"> <FaAngleRight />Om os</Link>
           <Link to="kontaktos"><FaAngleRight />Kontakt os</Link>
@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
         { contactinformation &&
           <div className="footerkontakt">
-            <h4>Kontakt os</h4>
+            <h3>Kontakt os</h3>
             <div>
               <p><b>Adresse:</b> { contactinformation.address }{ contactinformation.zipcity }</p>
             </div>
@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
         }
         <div className="footernyhedsbrev">
-          <h4>Nyhedsbrev</h4>
+          <h3>Nyhedsbrev</h3>
           <p>Tilmeld dig vores Nyhedsbrev her</p>
           <form onSubmit={ handleSubmit }>
             <div className="tilmeld">

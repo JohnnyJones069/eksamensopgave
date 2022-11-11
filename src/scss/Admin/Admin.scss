@@ -1,9 +1,109 @@
 // Navigation
 .AdminLayout {
   height: 100vh;
+  position: relative;
 
   .Admin-container {
     // display: flex;
+    
+    
+    .AdminTours {
+      .topPage {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+    
+      .create {
+        justify-self: flex-end;
+      }
+    
+      .delete {
+        cursor: pointer;
+      }
+    
+    }
+    
+    .card-container {
+      display: flex;
+      justify-content: normal;
+      flex-wrap: wrap;
+      margin: 10px;
+    }
+    
+    .card {
+      width: 33%;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      padding: 30px 30px;
+      border: 1px solid rgb(166, 166, 166);
+      border-radius: 3px;
+      background-color: silver;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      border: 1px solid rgb(121, 121, 121);
+    }
+    
+    .editdeletebut {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-content: flex-end;
+      margin-top: 20px;
+    }
+    
+    .AdminToursCreate {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    
+      div {
+        margin-bottom: 10px;
+      }
+    
+      label {
+        font-size: 20px;
+      }
+    
+      .quill {
+        width: 300px;
+    
+      }
+    }
+    
+    .NoMatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 100px;
+    
+      .nomatch-container>* {
+        color: $eerie-black;
+        margin-top: 15px;
+      }
+    
+      button {
+        padding: 5px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    
+    }
+
+
+
+
 
     .AdminPage {
       width: 100%;
@@ -13,191 +113,10 @@
   }
 }
 
-.AdminNavbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: #3333;
-  color: black;
-  position: relative; //aht burger-buttons absolute-position
-  padding: 0 1rem;
-
-
-  ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
-    // align-items: center;
-    li {
-
-      transition: all 0.5s ease;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-
-      }
-
-      .active {
-        background-color: rgba(0, 0, 0, 0.5);
-      }
-    }
-
-    a {
-      display: block;
-      text-decoration: none;
-      color: black;
-      padding: 1rem;
-    }
-
-  }
-
-  .logout {
-
-    button {
-      margin-top: 0.9rem;
-      padding: 0.1rem;
-      right: 0;
-    }
-
-  }
-}
-
-
-
-
-.AdminTours {
-  .topPage {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-
-  .create {
-    justify-self: flex-end;
-  }
-
-  .delete {
-    cursor: pointer;
-  }
-
-}
-
-.card-container {
-  display: flex;
-  justify-content: normal;
-  flex-wrap: wrap;
-  margin: 10px;
-}
-
-.card {
-  width: 33%;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  padding: 30px 30px;
-  border: 1px solid rgb(166, 166, 166);
-  border-radius: 3px;
-  background-color: silver;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  border: 1px solid rgb(121, 121, 121);
-}
-
-.editdeletebut {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-content: flex-end;
-  margin-top: 20px;
-}
-
-.AdminToursCreate {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-
-  div {
-    margin-bottom: 10px;
-  }
-
-  label {
-    font-size: 20px;
-  }
-
-  .quill {
-    width: 300px;
-
-  }
-}
-
-.NoMatch{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 100px;
-  
-  .nomatch-container > *{
-    color:$eerie-black;
-    margin-top: 15px;
-  }
-  button{
-    padding:5px;
-    background-color: black;
-    color:white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-
-}
 
 @media screen and (max-width: 1533px) {
-  .card{
+  .card {
     width: 49%;
   }
-  
-}
 
-
-@media screen and (max-width: 800px) {
-  .AdminNavbar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  .AdminNavbar li {
-    float: left;
-  }
-
-  // .card {
-  //   width: 45%;
-  //   margin-right: 5px;
-  //   margin-bottom: 5px;
-  //   padding: 30px 30px;
-  //   border: 1px solid rgb(166, 166, 166);
-  //   border-radius: 3px;
-  //   background-color: silver;
-  //   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  //   transition: 0.3s;
-  // }
-
-}
-
-@media screen and (max-width:850px) {
-  .AdminLayout{
-    width: 850px;
-  }
-  // .card {
-  //   width: 100%;
-  //   margin-bottom: 15px;
-  // }
 }

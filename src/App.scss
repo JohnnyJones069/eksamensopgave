@@ -45,8 +45,11 @@ button {
   padding: 8px 12px;
   border: none;
   transition: ease 0.5s;
-  border-radius: 7px;
+  border-radius: 5px;
+  // border-radius: 7px;
 }
+
+
 button:hover{
   background-color: transparent;
   color:$safety-orange-blaze-orange;
@@ -54,6 +57,9 @@ button:hover{
   cursor: pointer;
 }
 
+input:focus{
+  outline: 1px solid $safety-orange-blaze-orange;
+}
 
 .breadcrumbsdiv{
   display: flex;
@@ -104,6 +110,12 @@ button:hover{
   }
 }
 
+@media screen and (max-width:800px) {
+
+  .breadcrumbsdiv{
+      padding: 100px 5% 50px 5%;
+  }
+}
 
 
 
@@ -130,6 +142,7 @@ button:hover{
 @import './scss/Admin/Login.scss';
 @import './scss/Admin/Loader.scss';
 @import './scss/Admin/ErrorMessage.scss';
+@import './scss/Admin/AdminNav.scss';
 
 // Fonts
 @import './scss/Fonts/_flaticon';

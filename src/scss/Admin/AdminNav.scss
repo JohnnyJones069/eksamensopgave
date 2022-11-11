@@ -1,26 +1,20 @@
-.Navbar {
+.Admin-navbar {
     color: black;
-    position: absolute; //aht burger-buttons absolute-position
-    padding: 0 1rem;
+    position: relative; //aht burger-buttons absolute-position
     font-family: 'Flaticon', Arial, Helvetica, sans-serif;
-    z-index: 10;
-    margin-top: -25px;
-    top: 100px;
     width: 100%;
-
+    background-color:lightgray ;
 
 
     .burger-button {
         display: none; //flex
-        position: absolute;
-        top: 1rem;
-        left: 0.75rem;
+        position: relative;
         flex-direction: column;
         justify-content: space-between;
         width: 50px;
         height: 40px;
         cursor: pointer;
-        background-color: $onyx;
+        background-color: gray;
         margin: 1px;
         padding: 8px;
 
@@ -36,8 +30,7 @@
     }
 
     ul {
-        background-color: $cultured;
-        width: 80%;
+        width: 100%;
         display: flex;
         margin: auto;
         padding: 5px;
@@ -85,13 +78,10 @@ nav.sticky {
 
 @media screen and (max-width:800px) {
 
-    .Navbar {
-        background-color: white;
-        width: 95%;
-        left:1em;
+    .Admin-navbar {
+        background-color: lightgray;
+        width: 100%;
         box-shadow: 1px 1px 10px 1px #fff;
-        border-radius: 5px;
-        top:16em;
         padding: 1em 1em;
         
 
@@ -100,7 +90,7 @@ nav.sticky {
             // width:5%;
         }
 
-        .navbar-container {
+        .admin-navbar-container {
             height: 0;
             // height: 300px;
             width: 100%;
@@ -152,9 +142,6 @@ nav.sticky {
 
         }
 
-        .noShow{
-            display: none;
-        }
 
         .logout{
             width: 100%;

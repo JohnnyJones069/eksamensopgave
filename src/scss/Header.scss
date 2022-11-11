@@ -1,6 +1,5 @@
 .Header{
     display: flex;
-    height: 100px;
     background-color: $independence;
     padding-top: 10px;
     justify-content: space-between;
@@ -32,16 +31,26 @@
     }
 }
 
-@media (max-width:800px) {
+@media screen and (max-width:800px) {
 
     .Header {
         flex-direction: column;
         align-items: center;
         height: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 60px;
+        width: 100%;
 
         .Image{
             height: auto;
+        }
+
+        .headerabout{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            color:$cultured;
+            gap:10px;
+            align-items: center;
         }
 
         .location, .openTime, .number{

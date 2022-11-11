@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { getAbout } from '../../api/about'
 import parser from 'html-react-parser'
+import { Link } from 'react-router-dom'
 // import Loader from '../components/Loader';
 // import ErrorMessage from '../components/ErrorMessage';
 
 const Omstrøm = () => {
 
-    const [ error, setError ] = useState( false );
+  const [ error, setError ] = useState( false );
   const [ loading, setLoading ] = useState( false );
   const [ about, setAbout ] = useState()
 
@@ -27,17 +28,19 @@ const Omstrøm = () => {
   }, [] )
 
   return (
-    <div className='Omstrøm'>
-        { 
-          about &&
-          <div>
-            <h1>{parser(about.title)}</h1>
-            <article>{about.teaser}</article>
-          </div>
-        }
-        <br/>
+    <div className='OmStroem'>
+      {
+        about &&
+        <div>
+          <h1>{ parser( about.title ) }</h1>
+          <article><p>{ about.teaser }</p></article>
+        </div>
+      }
+      <br />
+      <Link to="/omos">
         <button>LÆS MERE</button>
-        
+      </Link>
+
     </div>
   )
 }

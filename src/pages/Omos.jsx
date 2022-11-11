@@ -53,7 +53,7 @@ const Omos = () => {
               </Link>
             </div>
             <div className="about-stroem-undertext-imageelement">
-              <img src={ "http://localhost:5333/images/about/" + about.image } alt="foto" width="100%" />
+              <img src={ "http://localhost:5333/images/about/" + about.image } alt="Om Strøm foto" width="100%" />
             </div>
           </div>
         </div>

@@ -70,3 +70,9 @@ section h4{
     line-height: 1.4;
     transition: ease 1s;
 }
+
+@media screen and (max-width:800px) {
+    .Accordion-container{
+        width: 90%;
+    }
+}

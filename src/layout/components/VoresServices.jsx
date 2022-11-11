@@ -16,7 +16,6 @@ const VoresServices = () => {
         setLoading( true )
         getService()
             .then( ( servicedata ) => {
-                console.log( servicedata )
                 setService( servicedata?.data )
                 setError( false )
             } )
@@ -80,7 +79,7 @@ const VoresServices = () => {
                     <h3 className='orange'>Book</h3>
                     <h3>Service nu</h3>
                 </div>
-                <form onSubmit={ handleSubmit }>
+                <form className='submitbooking' onSubmit={ handleSubmit }>
 
                     <input type="text" name='name' placeholder="Dit navn" />
                     <input type="email" name='email' placeholder="Din Email" />

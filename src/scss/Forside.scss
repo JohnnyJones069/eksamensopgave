@@ -16,9 +16,17 @@
     button{
         margin-top: 30px;
         font-size: 15px;
+        
         :hover{
             background-color: transparent;
         }
     }
 
+}
+
+@media screen and (max-width:800px){
+    .hjaelpfrastroem{
+        padding: 40px 20px 40px 20px;
+        text-align: center;
+    }
 }
