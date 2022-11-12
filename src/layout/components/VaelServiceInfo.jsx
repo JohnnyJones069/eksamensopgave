@@ -51,12 +51,12 @@ const VaelServiceInfo = ( { contentId, type } ) => {
           <div>
             <div className="vaelserviceImg">
               <div className="vaelgserviceimgbox">
-                <img src={ "http://localhost:5333/images/service/" + service.image } alt="foto" width="100%" />
+                <img src={ "http://localhost:5333/images/service/" + service.image } alt="Service foto" width="100%"/>
               </div>
-              <div className="vaelservicetext">
+              <article className="vaelservicetext">
                 <h2>{ service.title }</h2>
                 { parser( service.content ) }
-              </div>
+              </article>
             </div>
           </div>
 

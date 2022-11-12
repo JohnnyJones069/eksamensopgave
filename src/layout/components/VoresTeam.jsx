@@ -27,7 +27,7 @@ const VoresTeam = () => {
 
     return (
         <div className='voresteam'>
-            <div className="headline">
+            <article className="headline">
                 <h2>Vores <span className='orange'>team</span></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab obcaecati similique debitis.</p>
                 <div className="litleicon">
@@ -35,12 +35,12 @@ const VoresTeam = () => {
                     <span className='circle'></span>
                     <span className='line'></span>
                 </div>
-            </div>
+            </article>
 
             <div className="team">
                 { team && team.map( ( t, i ) =>
                     <div className="teamMember" key={ i }>
-                        <img src={ "http://localhost:5333/images/team/" + t.image } />
+                        <img src={ "http://localhost:5333/images/team/" + t.image }  alt="Hold medlems billed"/>
                         <div className='overlay' key={ i }>
                             <div className="triangleLeftA"></div>
                             <div className="triangleLeftB"></div>

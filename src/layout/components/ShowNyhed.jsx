@@ -58,7 +58,7 @@ const ShowNyhed = () => {
                         <div className="ShowNyhedElement">
                             <div className='ShowNyhedcard'>
                                 <div className="ShowNyhedImage">
-                                    <img src={ "http://localhost:5333/images/news/" + news.image } />
+                                    <img src={ "http://localhost:5333/images/news/" + news.image } alt="Nyheds billed"/>
                                     <div className="bookmark">
                                         <span className="bookmarkleft"></span>
                                         <span className="bookmarkright"></span>
@@ -66,22 +66,22 @@ const ShowNyhed = () => {
                                         <span className="bookmarkmonth">{ new Date( news.received ).toLocaleDateString( "en-GB", { month: "short" } ) }</span>
                                     </div>
                                 </div>
-                                <div className="ShowNyhedinfobox">
+                                <article className="ShowNyhedinfobox">
                                     <p><FaComments /> { news.comments.length } kommentarer</p>
                                     <h2>{ news.title }</h2>
                                     <hr style={ { color: "#789", backgroundColor: "#789", margin: "20px" } } />
                                     <p>{ news.content }</p>
-                                </div>
+                                </article>
                             </div>
                             <div className="ShowNyhedKommentar">
                                 <h3>Kommenteret ({ news.comments.length })</h3>
 
                                 { news && news.comments.map( ( s, i ) =>
-                                    <div className='ShowNyhedKommentarElement'>
+                                    <article className='ShowNyhedKommentarElement'>
                                         <h4>{ s.name }</h4>
                                         <h5><GoCalendar /> { new Date( s.received ).toLocaleDateString( "en-GB", { day: "2-digit", month: "short", year: "numeric" } ) }</h5>
                                         <p>{ s.comment }</p>
-                                    </div>
+                                    </article>
                                 )
                                 }
                             </div>

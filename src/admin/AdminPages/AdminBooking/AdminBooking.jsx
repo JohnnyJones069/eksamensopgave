@@ -42,7 +42,6 @@ const AdminBooking = () => {
         } )
         .catch( ( err ) => {
           setError( true )
-          console.log( err )
         } )
         .finally( () => {
           setLoading( false )
@@ -65,7 +64,7 @@ const AdminBooking = () => {
       <div className='card-container'>
         {
           booking && booking.map( b =>
-            <div className='card' key={ b._id }>
+            <article className='card' key={ b._id }>
               <h2>{ b.name }</h2>
               <br />
               <p>{ b.email }</p>
@@ -87,7 +86,7 @@ const AdminBooking = () => {
                 </Link>
 
               </div>
-            </div>
+            </article>
           )
         }
       </div>

@@ -17,7 +17,7 @@ const modules = {
 const AdminNyhedRet = () => {
 
     const { ID } = useParams()
-    console.log( ID );
+    // console.log( ID );
 
     const [ news, setNews ] = useState()
     const [ error, setError ] = useState( false )
@@ -65,7 +65,7 @@ const AdminNyhedRet = () => {
             } )
             .catch( ( err ) => {
                 setError( true )
-                console.log( err )
+                // console.log( err )
             } )
             .finally( () => {
                 setLoading( false )
@@ -106,7 +106,7 @@ const AdminNyhedRet = () => {
                         {/* image */ }
                         <div>
                             <p>Nuværende Billed:</p>
-                            <img src={ "http://localhost:5333/images/news/" + news.image } width="200px" />
+                            <img src={ "http://localhost:5333/images/news/" + news.image } width="200px" alt='Nyhed billed'/>
                             <br />
                             <label htmlFor='inpImg'>Vælg evt. et andet billed</label>
                             <br />

@@ -53,7 +53,7 @@ const Kontaktos = () => {
       } )
       .catch( ( err ) => {
         setError( true )
-        console.log( err )
+        // console.log( err )
       } )
       .finally( () => {
         setLoading( false )
@@ -74,10 +74,10 @@ const Kontaktos = () => {
               <IoLocationSharp color='#ff6600ff' />
             </div>
             { contactinformation &&
-              <div className="info">
+              <article className="info">
                 <h4>Adresse</h4>
                 <p>{ contactinformation.address }, { contactinformation.zipcity }</p>
-              </div>
+              </article>
             }
           </div>
           <div className="infobox">
@@ -85,10 +85,10 @@ const Kontaktos = () => {
               <BsFillTelephoneFill color='#ff6600ff' style={ { fontSize: "20px" } } />
             </div>
             { contactinformation &&
-              <div className="info">
+              <article className="info">
                 <h4>Telefon</h4>
                 <p>{ contactinformation.phone }</p>
-              </div>
+              </article>
             }
           </div>
           <div className="infobox">
@@ -96,10 +96,10 @@ const Kontaktos = () => {
               <HiMail color='#ff6600ff' />
             </div>
             { contactinformation &&
-              <div className="info">
+              <article className="info">
                 <h4>Email</h4>
                 <p>{ contactinformation.email }</p>
-              </div>
+              </article>
             }
           </div>
         </div>

@@ -62,7 +62,7 @@ const Slider = ( props ) => {
                     sliderImages && sliderImages.map( ( s, i ) =>
 
                         <div className="mySlides fade" key={ "slider" + i }>
-                            <img src={ imagePath + s.image } style={ { width: "100%" } } />
+                            <img src={ imagePath + s.image } style={ { width: "100%" } } alt="Slider billed"/>
                             <div className="shadow"></div>
                             <div className="sliderFlexbox">
                                 { parser( s.caption ) }

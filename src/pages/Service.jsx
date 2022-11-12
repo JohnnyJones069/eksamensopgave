@@ -56,9 +56,9 @@ const Service = () => {
             <div className="service">
                 <div className="vaelservice">
                     { service && service.map((s, k) =>
-                        <div className={activeService == k ? "vaelgservicebox active" : "vaelgservicebox"}  key={ s._id } onClick={ () => handleActive( k, s._id ) } style={ { cursor: "pointer" } }>
+                        <article className={activeService == k ? "vaelgservicebox active" : "vaelgservicebox"}  key={ s._id } onClick={ () => handleActive( k, s._id ) } style={ { cursor: "pointer" } }>
                             <h3>{ s.title } <FaLongArrowAltRight /></h3>
-                        </div>
+                        </article>
                     )
                     }
                 </div>

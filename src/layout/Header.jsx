@@ -31,23 +31,23 @@ const Header = () => {
   return (
     <div className='Header'>
       <div className='Image'>
-        <img src={ logo } />
+        <img src={ logo } alt='Strøm logo'/>
       </div>
       { contactinformation &&
 
         <div className='headerabout'>
-          <div className="location">
+          <article className="location">
             <IoLocationSharp color='#ff6600ff' />
             <p>{contactinformation.address}, {contactinformation.zipcity}</p>
-          </div>
-          <div className="openTime">
+          </article>
+          <article className="openTime">
             < IoTimeOutline color='#ff6600ff' />
             <p>{contactinformation.openinghours}</p>
-          </div>
-          <div className="number">
+          </article>
+          <article className="number">
             <BsFillTelephoneFill color='#ff6600ff' />
             <p>{contactinformation.phone}</p>
-          </div>
+          </article>
         </div>
       }
     </div>

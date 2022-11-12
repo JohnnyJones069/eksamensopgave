@@ -56,9 +56,9 @@ const AccordionPage = () => {
                                         { accordion === i ? ( <><span className=' verticle'><RiArrowUpSLine /></span></> ) : ( <><span className=' verticle'><RiArrowDownSLine /></span></> ) }
                                     </div>
                                 </section>
-                                <div className={ accordion === i ? "active" : "inactive" }>
+                                <article className={ accordion === i ? "active" : "inactive" }>
                                     <p className={ accordion === i ? "active" : "inactive" }>{ f.answer }</p>
-                                </div>
+                                </article>
                             </div>
                         </div>
                     )

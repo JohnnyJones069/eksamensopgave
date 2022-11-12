@@ -38,13 +38,13 @@ const AdminBookingRet = () => {
   }, [ ] )
 
   const handleAccept = e => {
-    console.log(e.target.value)
+    // console.log(e.target.value)
     if (e.target.value === "true") {
       setAccept(false)
     } else {
       setAccept(true)
     }
-    console.log(accept)
+    // console.log(accept)
   }
 
   const handleSubmit = ( e ) => {
@@ -57,13 +57,13 @@ const AdminBookingRet = () => {
 
     editBooking( formData, ID )
     .then( ( response ) => {
-      console.log( response.data )
+      // console.log( response.data )
       setMessage( "Booking er rettet" )
       
       } )
       .catch( ( err ) => {
         setError( true )
-        console.log( err )
+        // console.log( err )
       } )
       .finally( () => {
         setLoading( false )

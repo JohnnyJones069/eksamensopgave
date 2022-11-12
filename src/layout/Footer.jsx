@@ -45,7 +45,7 @@ const Footer = () => {
       } )
       .catch( ( err ) => {
         setError( true )
-        console.log( err )
+        // console.log( err )
       } )
       .finally( () => {
         setLoading( false )
@@ -54,31 +54,31 @@ const Footer = () => {
   }
 
   return (
-    <div className='Footer'>
+    <footer className='Footer'>
       <div className="footerinfo">
         <div className="footerabout">
-          <img src={ logo } />
+          <img src={ logo } alt='Strøm logo' />
           <p>Som medlem af Elinstallatørernes Landsorganisation, ELFO, er vi tilsluttet et ankerværn og en garantiordning</p>
         </div>
-        <div className="footerlinks">
+        <ul className="footerlinks">
           <h3>Link</h3>
           <Link to="faq"><FaAngleRight />FAQ</Link>
           <Link to="omos"> <FaAngleRight />Om os</Link>
           <Link to="kontaktos"><FaAngleRight />Kontakt os</Link>
           <Link to="service"><FaAngleRight />Services</Link>
-        </div>
+        </ul>
         { contactinformation &&
-          <div className="footerkontakt">
+          <article className="footerkontakt">
             <h3>Kontakt os</h3>
-            <div>
+            <article>
               <p><b>Adresse:</b> { contactinformation.address }{ contactinformation.zipcity }</p>
-            </div>
+            </article>
             <p><b>Telefon:</b> { contactinformation.phone }</p>
             <p><b>Email:</b> { contactinformation.email }</p>
             <p><b>CVR :</b> { contactinformation.cvr }</p>
-          </div>
+          </article>
         }
-        <div className="footernyhedsbrev">
+        <article className="footernyhedsbrev">
           <h3>Nyhedsbrev</h3>
           <p>Tilmeld dig vores Nyhedsbrev her</p>
           <form onSubmit={ handleSubmit }>
@@ -87,21 +87,21 @@ const Footer = () => {
               <button type='submit'>TILMELD</button>
             </div>
           </form>
-        </div>
+        </article>
       </div>
       <div className="footerinfobottom">
         <p><span>Strøm</span> &copy; 2017 All Rights Reserved</p>
 
-        <div className="footersocial">
+        <ul className="footersocial">
           {/* { contactinformation && */ }
           <Link to="https://facebook/stroem-grenaa"><div className='socialmediaicon'><FaFacebookF /></div></Link>
           <Link to="https://twitter.com/stroem-grenaa"><div className='socialmediaicon'><FaTwitter /></div></Link>
           <Link to="https://vimeo.com/stroem-grenaa"><div className='socialmediaicon'><FaVine /></div></Link>
           <Link to="https://linkedin.com/stroem-grenaa"><div className='socialmediaicon'><FaLinkedinIn /></div></Link>
           {/* } */ }
-        </div>
+        </ul>
       </div>
-    </div>
+    </footer>
   )
 }
 

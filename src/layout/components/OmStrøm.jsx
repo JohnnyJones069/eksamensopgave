@@ -31,10 +31,10 @@ const Omstrøm = () => {
     <div className='OmStroem'>
       {
         about &&
-        <div>
+        <article>
           <h1>{ parser( about.title ) }</h1>
           <article><p>{ about.teaser }</p></article>
-        </div>
+        </article>
       }
       <br />
       <Link to="/omos">

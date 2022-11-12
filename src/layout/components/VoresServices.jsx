@@ -53,7 +53,7 @@ const VoresServices = () => {
     return (
         <div className='Overdiv'>
             <div className='VoresServices'>
-                <div className='VoresServiceHeader'>
+                <article className='VoresServiceHeader'>
                     <h1>Vores <span className='orange'>Services</span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime pariatur impedit expedita!</p>
                     <div className="litleicon">
@@ -61,29 +61,29 @@ const VoresServices = () => {
                         <span className='circle'></span>
                         <span className='line'></span>
                     </div>
-                </div>
+                </article>
 
                 { service && service.map( ( s, i ) =>
                     <div className="VoresServicesdiv" key={ i }>
                         <span className={ s.icon }></span>
-                        <div className="serviceinfotext">
+                        <article className="serviceinfotext">
                             <h2>{ s.title }</h2>
                             <p>{ s.teaser }</p>
-                        </div>
+                        </article>
                     </div>
                 )
 
                 }
 
                 <div className="serviceimg">
-                    <img src={ handylady } />
+                    <img src={ handylady } alt="Handy lady billed"/>
                 </div>
             </div>
             <div className='BookServiceNu'>
-                <div className="text">
+                <article className="text">
                     <h3 className='orange'>Book</h3>
                     <h3>Service nu</h3>
-                </div>
+                </article>
                 <form className='submitbooking' onSubmit={ handleSubmit }>
 
                     <input type="text" name='name' placeholder="Dit navn" />

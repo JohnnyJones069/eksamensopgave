@@ -42,7 +42,7 @@ const AdminNyheder = () => {
         } )
         .catch( ( err ) => {
           setError( true )
-          console.log( err )
+          // console.log( err )
         } )
         .finally( () => {
           setLoading( false )
@@ -69,7 +69,7 @@ const AdminNyheder = () => {
       <div className='card-container'>
         {
           news && news.map( n =>
-            <div className='card' key={ n._id }>
+            <article className='card' key={ n._id }>
               <h2>{ n.title }</h2>
               <br />
               <p>{ n.content }</p>
@@ -85,7 +85,7 @@ const AdminNyheder = () => {
                 </Link>
 
               </div>
-            </div>
+            </article>
           )
         }
       </div>

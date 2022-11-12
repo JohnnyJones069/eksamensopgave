@@ -43,7 +43,7 @@ const Omos = () => {
       </div>
       { about &&
         <div className="AboutStroem">
-          <div className="about-stroem-headlinetext">
+          <section className="about-stroem-headlinetext">
             <h1>{ parser( about.title ) }</h1>
             <article><p>{ about.teaser }</p></article>
             <div className="litleicon">
@@ -51,14 +51,14 @@ const Omos = () => {
               <span className='circle'></span>
               <span className='line'></span>
             </div>
-          </div>
+          </section>
           <div className="about-stroem-undertext">
-            <div className="about-stroem-undertext-textelement">
+            <article className="about-stroem-undertext-textelement">
               { parser( about.content ) }
               <Link to="/kontaktos">
                 <button>KONTAKT OS</button>
               </Link>
-            </div>
+            </article>
             <div className="about-stroem-undertext-imageelement">
               <img src={ "http://localhost:5333/images/about/" + about.image } alt="Om Strøm foto" width="100%" />
             </div>

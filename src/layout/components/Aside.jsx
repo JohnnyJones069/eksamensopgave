@@ -40,7 +40,7 @@ const AsideComponent = () => {
                     <div>
                         <Link to={ "/nyheder/" + n._id } className='normaltext'>
                             <div className='asidecomponents' key={ i }>
-                                <img src={ "http://localhost:5333/images/news/" + n.image } />
+                                <img src={ "http://localhost:5333/images/news/" + n.image } alt='Nyhed logo'/>
                                 <div className='txt' key={ i }>
                                     { n.title }
                                     <div className="date" key={ i }>
