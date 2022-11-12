@@ -31,29 +31,36 @@ const SidsteNyt = () => {
             <div className='SidsteNytHeadline'>
                 <h2>Sidste <span className='orange'>Nyt</span></h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit unde aliquam quis.</p>
+                <div className="litleicon">
+                    <span className="line"></span>
+                    <span className='circle'></span>
+                    <span className='line'></span>
+                </div>
             </div>
             <div className='NewsDisplay'>
                 { news && news.map( ( n, i ) =>
-                    <div className="SidsteNytBox" key={ i }>
-                        <div className="SidsteNytOverlay">
-                            <img src={ "http://localhost:5333/images/news/" + n.image } />
-                            <div className="bookmark">
-                                <span className="bookmarkleft"></span>
-                                <span className="bookmarkright"></span>
-                                <span className="bookmarkday">{ new Date( n.received ).toLocaleDateString( "en-GB", { day: "numeric" } ) }</span>
-                                <span className="bookmarkmonth">{ new Date( n.received ).toLocaleDateString( "en-GB", { month: "short" } ) }</span>
+                    <Link className='normaltext' to={ "/nyheder/" + n._id }>
+                        <div className="SidsteNytBox" key={ i }>
+                            <div className="SidsteNytOverlay">
+                                <img src={ "http://localhost:5333/images/news/" + n.image } />
+                                <div className="bookmark">
+                                    <span className="bookmarkleft"></span>
+                                    <span className="bookmarkright"></span>
+                                    <span className="bookmarkday">{ new Date( n.received ).toLocaleDateString( "en-GB", { day: "numeric" } ) }</span>
+                                    <span className="bookmarkmonth">{ new Date( n.received ).toLocaleDateString( "en-GB", { month: "short" } ) }</span>
+                                </div>
                             </div>
+                            <article className="SidsteNytText">
+                                <h3>{ n.title }</h3>
+                                <p>{ n.content.slice( 0, 150 ) }...</p>
+                            </article>
                         </div>
-                        <article className="SidsteNytText">
-                        <h3>{n.title}</h3>
-                        <p>{n.content.slice(0,150)}...</p>
-                        </article>
-                    </div>
-                ).reverse().slice(0,3)
+                    </Link>
+                ).reverse().slice( 0, 3 )
                 }
             </div>
-            <Link to={"/nyheder"}>
-            <button>FLERE NYHEDER...</button>
+            <Link to={ "/nyheder" }>
+                <button>FLERE NYHEDER...</button>
             </Link>
 
             <div className='bookmark'>

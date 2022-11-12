@@ -3,6 +3,7 @@
         margin:0;
         padding: 0.4rem;
         float: right;
+        width: 100%;
 
     input {
         border: none;
@@ -10,6 +11,7 @@
         margin:0;   
         border:1px solid lightgray;    
         border-right: none;
+        width: 85%;
         border-radius: none;
     }
 
@@ -21,7 +23,8 @@
         border-left: none;
         background-color: white;  
         color:$eerie-black;
-        margin-top: 1px;        
+        margin-top: 1px;  
+        width: 15%;      
     }
 
 

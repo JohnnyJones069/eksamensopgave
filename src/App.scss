@@ -49,6 +49,48 @@ button {
   // border-radius: 7px;
 }
 
+.VoresServiceHeader{
+  .litleicon{
+    margin:0;
+    justify-content: flex-start;
+  }
+}
+
+.about-stroem-undertext-textelement{
+  .litleicon{
+    margin-top: 0;
+    margin-left:25px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+  }
+}
+
+.litleicon{
+  // background-color: green;
+  height: 15px;
+  width:130px;
+  margin:auto;
+  display: flex;
+  gap:1px;
+  margin-top: 10px;
+  align-content:center ;
+  justify-content: center;
+
+  .line{
+    border-top: 2px solid lightgray;
+    width: 40px;
+    height: 100%;
+    margin-top: 5px;
+  }
+  .circle{
+    width: 10%;
+    height: 90%;
+    border-radius: 50%;
+    border: 2px solid $safety-orange-blaze-orange;
+    background-color: transparent;
+  }
+}
+
 .amount-active{
   background-color: silver;
 }

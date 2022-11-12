@@ -3,6 +3,8 @@ import Breadcrumbs from '../layout/components/Breadcrumbs';
 import { getAbout } from '../api/about';
 import parser from 'html-react-parser';
 import { Link } from 'react-router-dom';
+import VoresKunderSiger from '../layout/components/VoresKunderSiger';
+import VoresTeam from '../layout/components/VoresTeam';
 
 
 const listItems = [
@@ -44,6 +46,11 @@ const Omos = () => {
           <div className="about-stroem-headlinetext">
             <h1>{ parser( about.title ) }</h1>
             <article><p>{ about.teaser }</p></article>
+            <div className="litleicon">
+              <span className="line"></span>
+              <span className='circle'></span>
+              <span className='line'></span>
+            </div>
           </div>
           <div className="about-stroem-undertext">
             <div className="about-stroem-undertext-textelement">
@@ -58,6 +65,9 @@ const Omos = () => {
           </div>
         </div>
       }
+
+      <VoresKunderSiger />
+      <VoresTeam />
     </div>
   )
 }

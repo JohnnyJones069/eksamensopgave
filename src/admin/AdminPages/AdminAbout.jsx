@@ -22,6 +22,7 @@ const AdminAbout = () => {
 
   const [ content, setContent ] = useState()
   const [ teaser, setTeaser ] = useState()
+  const [ title, setTitle ] = useState()
   const [ message, setMessage ] = useState()
   const [ thumbImage, makeThumb ] = useThumb()
 
@@ -52,6 +53,7 @@ const AdminAbout = () => {
     let formData = new FormData( e.target )
 
     formData.append( "content", content )
+    formData.append( "title", title )
 
     editAbout( formData )
       .then( ( response ) => {
@@ -91,7 +93,8 @@ const AdminAbout = () => {
           <div>
             <label htmlFor="inpTitle">Titel</label>
             <br />
-            <input type="text" defaultValue={ about.title } name="title" id="inpTitle" placeholder="Indtast title" />
+            <ReactQuill className='quill' theme="snow" modules={ modules } defaultValue={ about.title } onReady={ !title ? setTitle( about.title ) : null } onChange={ setTitle } />
+            {/* <input type="text" defaultValue={ about.title } name="title" id="inpTitle" placeholder="Indtast title" /> */}
           </div>
           <div>
             <label htmlFor="inpTeaser">Teaser</label>

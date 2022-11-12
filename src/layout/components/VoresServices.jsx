@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getService } from '../../api/service'
-import {createBooking} from '../../api/booking'
+import { createBooking } from '../../api/booking'
 import handylady from '../assets/img/handylady.png'
 
 const VoresServices = () => {
@@ -56,6 +56,11 @@ const VoresServices = () => {
                 <div className='VoresServiceHeader'>
                     <h1>Vores <span className='orange'>Services</span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime pariatur impedit expedita!</p>
+                    <div className="litleicon">
+                        <span className="line"></span>
+                        <span className='circle'></span>
+                        <span className='line'></span>
+                    </div>
                 </div>
 
                 { service && service.map( ( s, i ) =>

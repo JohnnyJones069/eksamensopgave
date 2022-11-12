@@ -4,6 +4,7 @@
     flex-direction: column;
     margin-top: 250px;
     margin-bottom: 150px;
+    gap:40px;
 
     button {
         border-radius: 3px;
@@ -24,6 +25,7 @@
 
     h2 {
         color: $eerie-black;
+        font-size: 40px;
     }
 }
 
@@ -35,13 +37,16 @@
     margin-top: 50px;
     justify-content: center;
     margin-bottom: 50px;
+    left:0;
+    right: 0;
+    margin:auto;
+    width: 90%;
 
 }
 
 .SidsteNytBox {
     border-radius: 10px;
     overflow: hidden;
-    width: 25%;
     transition: ease 1s;
     background-color: $cultured;
 

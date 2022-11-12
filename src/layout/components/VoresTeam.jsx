@@ -30,6 +30,11 @@ const VoresTeam = () => {
             <div className="headline">
                 <h2>Vores <span className='orange'>team</span></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab obcaecati similique debitis.</p>
+                <div className="litleicon">
+                    <span className="line"></span>
+                    <span className='circle'></span>
+                    <span className='line'></span>
+                </div>
             </div>
 
             <div className="team">

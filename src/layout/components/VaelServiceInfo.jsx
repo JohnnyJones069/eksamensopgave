@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getServiceID, getService } from '../../api/service';
 import parser from 'html-react-parser';
+import { Link } from 'react-router-dom';
 
 
 const VaelServiceInfo = ( { contentId, type } ) => {
