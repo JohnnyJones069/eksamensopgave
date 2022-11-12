@@ -7,10 +7,9 @@ import VoresKunderSiger from '../layout/components/VoresKunderSiger';
 import VoresServices from '../layout/components/VoresServices';
 import VoresTeam from '../layout/components/VoresTeam';
 import { Link } from 'react-router-dom';
-// import Loader from '../components/Loader';
+// import Loader from '../admin/components/Loader';
 // import ErrorMessage from '../components/ErrorMessage';
 
-// import Slider from '../layout/components/Slider'
 
 
 const Forside = () => {
