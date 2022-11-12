@@ -16,7 +16,7 @@ const AdminBookingRet = () => {
   const [ error, setError ] = useState( false )
   const [ loading, setLoading ] = useState( false )
   const [ message, setMessage ] = useState()
-
+  const [accept, setAccept] = useState()
 
 
   useEffect( () => {
@@ -24,6 +24,7 @@ const AdminBookingRet = () => {
     getBookingByID(ID)
       .then( ( response ) => {
         setBooking( response.data )
+        setAccept( response.data.accept )
         setError( false )
       } )
       .catch( ( err ) => {
@@ -36,6 +37,15 @@ const AdminBookingRet = () => {
 
   }, [ ] )
 
+  const handleAccept = e => {
+    console.log(e.target.value)
+    if (e.target.value === "true") {
+      setAccept(false)
+    } else {
+      setAccept(true)
+    }
+    console.log(accept)
+  }
 
   const handleSubmit = ( e ) => {
     e.preventDefault()
@@ -44,9 +54,8 @@ const AdminBookingRet = () => {
 
     
     let formData = new FormData( e.target )
-    
 
-    editBooking( formData )
+    editBooking( formData, ID )
     .then( ( response ) => {
       console.log( response.data )
       setMessage( "Booking er rettet" )
@@ -73,7 +82,7 @@ const AdminBookingRet = () => {
       { booking && <div className='AdminOverwatch'>
         <form onSubmit={ handleSubmit }>
           <div>
-            <label htmlFor="inpName">Nacn</label>
+            <label htmlFor="inpName">Navn</label>
             <br />
             <input type="text" defaultValue={ booking.name } name="name" id="inpName" />
           </div>
@@ -95,7 +104,8 @@ const AdminBookingRet = () => {
           <div>
             <label htmlFor="inpAccept">Accepter?</label>
             <br />
-            <input type="checkbox" defaultValue={ booking.accept } name="accept" id="inpAccept" />
+            { accept === true && <input type="checkbox" defaultValue={ accept } onChange={ handleAccept } checked name="accept" id="inpAccept" /> }
+            { accept === false && <input type="checkbox" defaultValue={ accept } onChange={ handleAccept } checked name="accept" id="inpAccept" /> }
           </div>
           <button type='submit'>Ret About segment</button>
         </form>

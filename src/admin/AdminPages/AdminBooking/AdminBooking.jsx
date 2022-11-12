@@ -76,7 +76,7 @@ const AdminBooking = () => {
               <br />
               <p>{ new Date( b.received ).toLocaleDateString( "da", { day: "numeric", month: "long", year: "numeric" } ) }</p>
               <br />
-              <p>{b.aacept === true ? "Denne booking er godkendt" : "Denne booking er ikke godkendt"}</p>
+              <p>{b.accept === true ? "Denne booking er godkendt" : "Denne booking er ikke godkendt"}</p>
               <br />
               <p>{ b.received }</p>
 
