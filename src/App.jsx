@@ -7,6 +7,9 @@ import Forside from './pages/Forside';
 import Kontaktos from './pages/Kontaktos';
 import Nyheder from './pages/Nyheder';
 import Omos from './pages/Omos';
+import ShowNyhed from './layout/components/ShowNyhed';
+import AccordionPage from './pages/AccordionPage';
+import Service from './pages/Service';
 
 // Admin
 import AdminLayout from './admin/layout/AdminLayout';
@@ -19,9 +22,7 @@ import AdminToursEdit from './admin/AdminPages/AdminTours/AdminToursEdit';
 import AdminAbout from './admin/AdminPages/AdminAbout';
 import AdminContact from './admin/AdminPages/AdminContact';
 import AdminFooter from './admin/AdminPages/AdminFooter';
-import ShowNyhed from './layout/components/ShowNyhed';
-import AccordionPage from './pages/AccordionPage';
-import Service from './pages/Service';
+import AdminNews from './admin/AdminPages/AdminNyheder/AdminNyheder';
 
 
 
@@ -51,7 +52,7 @@ function App () {
         <Route path="/admin" element={<AdminLayout />}>
           {/* Admin */}
           <Route index element={<AdminHome />} />
-          <Route path="admintours" element={<AdminTours />} />
+          <Route path="adminnews" element={<AdminNews />} />
           <Route path="admintoursopret" element={<AdminToursCreate />} />
           <Route path="admintoursret/:ID" element={<AdminToursEdit />} />
           <Route path="adminabout" element={<AdminAbout />} />

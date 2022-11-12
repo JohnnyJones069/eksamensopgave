@@ -38,8 +38,8 @@ const AsideComponent = () => {
                 <h3>Arkiv</h3>
                 { news && news.map( ( n, i ) =>
                     <div>
-                        <Link to={ "/nyheder/" + n._id } className='normaltext' key={ i }>
-                            <div className='asidecomponents'>
+                        <Link to={ "/nyheder/" + n._id } className='normaltext'>
+                            <div className='asidecomponents' key={ i }>
                                 <img src={ "http://localhost:5333/images/news/" + n.image } />
                                 <div className='txt' key={ i }>
                                     { n.title }

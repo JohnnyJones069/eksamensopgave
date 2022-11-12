@@ -14,13 +14,13 @@
 .text{
     padding-top: 30px;
     padding-bottom: 50px;
+    h2 {
+        font-family: sans-serif;
+        color: $cultured;
+        mix-blend-mode: difference;
+    }
 }
 
-h2 {
-    font-family: sans-serif;
-    color: $cultured;
-    mix-blend-mode: difference;
-}
 
 
 .cardview{

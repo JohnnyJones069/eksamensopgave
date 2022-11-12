@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { getNewsByID } from '../../api/news'
+import { getNewsByID, createComment } from '../../api/news'
 import AsideComponent from './Aside';
 import Breadcrumbs from './Breadcrumbs';
 import { FaComments } from 'react-icons/fa'
 import { GoCalendar } from 'react-icons/go'
+import MessageBox from '../../admin/components/MessageBox'
 
 
 
 const AdminToursEdit = () => {
-
+    
     const { ID } = useParams()
-
+    
     const [ news, setNews ] = useState()
     const [ error, setError ] = useState( false )
     const [ loading, setLoading ] = useState( false )
     const [ message, setMessage ] = useState()
-
+    const [ content, setContent ] = useState()
+    
     const listItems = [
         { title: 'Forside', link: '/' },
         { title: 'Nyheder', link: '/nyheder' },
         { title: news?.title, link: '' }
-
+    
     ]
     useEffect( () => {
         setLoading( true )
@@ -42,6 +44,27 @@ const AdminToursEdit = () => {
                 setLoading( false )
             } )
     }, [] )
+
+    const handleSubmit = ( e ) => {
+        e.preventDefault() // Forhindre reload af side
+        setLoading( true )
+
+        let formData = new FormData( e.target )
+        formData.append( "content", content );
+        createComment( formData )
+            .then( ( response ) => {
+                e.target.reset() // Tømmere formularfelterne
+                setMessage( "Kommentar er oprettet" )
+            } )
+            .catch( ( err ) => {
+                setError( true )
+                console.log( err )
+            } )
+            .finally( () => {
+                setLoading( false )
+            } )
+
+    }
 
 
     return (
@@ -86,13 +109,17 @@ const AdminToursEdit = () => {
 
                             <div className="SkrivEnKommentar">
                                 <hr style={ { color: "#789", backgroundColor: "#789", margin: "20px" } } />
+                                { message && <h2>{ message }</h2> }
                                 <h3>Skriv en kommentar</h3>
-                                <div className='inputnameogmail'>
-                                    <input className='inputname' type="name" name="" defaultValue="Navn"/>
-                                    <input className='inputname' type="email" name="" defaultValue="Email"/>
-                                </div>
-                                <textarea className='inputkommentar' type="text" name="" defaultValue="Kommentar" />
-                                <button>SEND BESKED</button>
+                                <form onSubmit={ handleSubmit }>
+                                    <div className='inputnameogmail'>
+
+                                        <input className='inputname' type="name" name="name" placeholder="Navn" required/>
+                                        <input className='inputname' type="email" placeholder="Email" />
+                                    </div>
+                                    <textarea className='inputkommentar' type="text" name="comment" placeholder="Kommentar" required/>
+                                    <button type='submit'>SEND BESKED</button>
+                                </form>
                             </div>
 
                         </div>

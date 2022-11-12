@@ -5,9 +5,11 @@
 
   .Admin-container {
     // display: flex;
+    text-align: center;
     
     
-    .AdminTours {
+    .AdminNews {
+      text-align: center;
       .topPage {
         display: flex;
         justify-content: space-between;
@@ -15,6 +17,9 @@
         margin-right: 20px;
       }
     
+      .headline{
+        justify-self: center;
+      }
     
       .create {
         justify-self: flex-end;
@@ -28,7 +33,7 @@
     
     .card-container {
       display: flex;
-      justify-content: normal;
+      justify-content: flex-start;
       flex-wrap: wrap;
       margin: 10px;
     }
@@ -43,6 +48,10 @@
       background-color: silver;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       transition: 0.3s;
+
+      h2{
+        color:$safety-orange-blaze-orange;
+      }
     }
     
     .card:hover {

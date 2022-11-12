@@ -27,7 +27,7 @@ export const getNewsByID = async (ID) => {
 }
   
   // Delete - slet udvalgt news
-export const deleteTour = async (newsID) => {
+export const deleteNews = async (newsID) => {
     let res = await axios.delete(baseUrl + "news/admin/" + newsID)
     .then(res => {return res;})
     .catch(err => {return err})
@@ -45,6 +45,14 @@ export const deleteTour = async (newsID) => {
   // PUT - ret News
   export const editNews = async (updatedNews, newsID) => {
     let res = await axios.put(baseUrl + "news/admin/" + newsID, updatedNews )
+    .then(res => {return res;})
+    .catch(err => {return err})
+    return res;
+}
+
+  // Post - opret Kommentar til News element
+  export const createComment = async (newComment, commentID) => {
+    let res = await axios.post(baseUrl + "news/comment/" + commentID, newComment )
     .then(res => {return res;})
     .catch(err => {return err})
     return res;
