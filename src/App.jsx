@@ -14,16 +14,14 @@ import Service from './pages/Service';
 // Admin
 import AdminLayout from './admin/layout/AdminLayout';
 import AdminHome from './admin/AdminPages/AdminHome';
-import AdminTours from './admin/AdminPages/AdminTours/AdminTours';
 import Login from './admin/components/Login';
 import NoMatch from './admin/components/NoMatch';
-import AdminToursCreate from './admin/AdminPages/AdminTours/AdminToursCreate';
-import AdminToursEdit from './admin/AdminPages/AdminTours/AdminToursEdit';
 import AdminAbout from './admin/AdminPages/AdminAbout';
-import AdminContact from './admin/AdminPages/AdminContact';
-import AdminFooter from './admin/AdminPages/AdminFooter';
 import AdminNews from './admin/AdminPages/AdminNyheder/AdminNyheder';
-
+import AdminNyhedOpret from './admin/AdminPages/AdminNyheder/AdminNyhderOpret';
+import AdminNyhedRet from './admin/AdminPages/AdminNyheder/AdminNyhederRet';
+import AdminBooking from './admin/AdminPages/AdminBooking/AdminBooking';
+import AdminBookingRet from './admin/AdminPages/AdminBooking/AdminBookingRet';
 
 
 
@@ -52,12 +50,12 @@ function App () {
         <Route path="/admin" element={<AdminLayout />}>
           {/* Admin */}
           <Route index element={<AdminHome />} />
-          <Route path="adminnews" element={<AdminNews />} />
-          <Route path="admintoursopret" element={<AdminToursCreate />} />
-          <Route path="admintoursret/:ID" element={<AdminToursEdit />} />
+          <Route path="adminnyheder" element={<AdminNews />} />
+          <Route path="adminnyhedopret" element={<AdminNyhedOpret />} />
+          <Route path="adminnyhedret/:ID" element={<AdminNyhedRet />} />
           <Route path="adminabout" element={<AdminAbout />} />
-          <Route path="admincontact" element={<AdminContact />} />
-          <Route path="adminfooter" element={<AdminFooter />} />
+          <Route path="adminbooking" element={<AdminBooking />} />
+          <Route path="adminbookingret/:ID" element={<AdminBookingRet />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
 

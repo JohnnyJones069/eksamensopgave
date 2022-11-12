@@ -49,6 +49,22 @@ button {
   // border-radius: 7px;
 }
 
+.amount-active{
+  background-color: silver;
+}
+
+.amountprpage{
+  display: flex;
+  flex-direction: row;
+}
+
+.MessageBox{
+  border:1px solid gray;
+  background-color: lightgray;
+  padding: 20px;
+  text-align: center;
+}
+
 
 button:hover{
   background-color: transparent;
@@ -59,6 +75,15 @@ button:hover{
 
 input:focus{
   outline: 1px solid $safety-orange-blaze-orange;
+}
+
+.close {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .breadcrumbsdiv{

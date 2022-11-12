@@ -43,7 +43,7 @@ const VoresKunderSiger = () => {
                     <h1>Vores <span className='orange'>kunder siger</span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis harum iure voluptates!</p>
                 </div>
-                <Carousel wrapAround={true} slidesToShow={3} style={{overflow:"hidden", paddingTop:"60px", alignContent:"center"}} renderBottomCenterControls="none" renderCenterLeftControls="none" renderCenterRightControls="none">
+                <Carousel wrapAround={true} slidesToShow={3} style={{overflow:"hidden", paddingTop:"80px", alignContent:"center"}} renderBottomCenterControls="none" renderCenterLeftControls="none" renderCenterRightControls="none">
                     { testimonial && randomizeArray( testimonial ).slice( 0, 4 ).map( ( t, i ) =>
                     <div className='cardview' key={i}>
                         <div className='card' key={ i }>

@@ -45,6 +45,15 @@
         box-shadow: 1px 1px 10px 1px #fff;
         justify-content: space-between;
 
+        .navigation {
+            display: flex;
+            width: 100%;
+        }
+
+        .navinput {
+            justify-self: flex-end;
+        }
+
         li {
 
             transition: all 0.5s ease;
@@ -88,12 +97,12 @@ nav.sticky {
     .Navbar {
         background-color: white;
         width: 95%;
-        left:0.5em;
+        left: 0.5em;
         box-shadow: 1px 1px 10px 1px #fff;
         border-radius: 5px;
-        top:16em;
+        top: 16em;
         padding: 1em 1em;
-        
+
 
         .burger-button {
             display: flex;
@@ -116,47 +125,48 @@ nav.sticky {
             width: 100%;
             flex-direction: column;
             height: auto;
-            gap:1px;
+            gap: 1px;
 
 
 
-                li {
-                    text-align: center;
-                    background-color:$independence ;
-                    &:hover{
-                        background-color: $safety-orange-blaze-orange;
-                        color:$cultured;
+            li {
+                text-align: center;
+                background-color: $independence ;
+
+                &:hover {
+                    background-color: $safety-orange-blaze-orange;
+                    color: $cultured;
+                }
+
+                .active {
+                    background-color: $safety-orange-blaze-orange ;
+                    color: $cultured;
+                }
+
+
+
+                a {
+                    color: $cultured;
+
+                    &:hover {
+                        color: $cultured;
                     }
 
                     .active {
-                        background-color:$safety-orange-blaze-orange ;
-                        color:$cultured;
+                        color: $cultured;
+                        background-color: $safety-orange-blaze-orange;
                     }
+                }
 
-
-
-                    a {
-                        color:$cultured;
-            
-                        &:hover {
-                            color: $cultured;
-                        }
-            
-                        .active {
-                            color:$cultured;
-                            background-color: $safety-orange-blaze-orange;
-                        }
-                    }
-                    
             }
 
         }
 
-        .noShow{
+        .noShow {
             display: none;
         }
 
-        .logout{
+        .logout {
             width: 100%;
             height: 100%;
         }

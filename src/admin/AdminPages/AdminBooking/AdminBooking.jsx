@@ -6,21 +6,21 @@ import Loader from '../../components/Loader';
 import parser from 'html-react-parser';
 import { Link } from 'react-router-dom';
 
-import {getAllNews, deleteNews } from '../../../api/news';
+import {getAllBooking, deleteBooking } from '../../../api/booking';
 
-const AdminNyheder = () => {
+const AdminBooking = () => {
 
   const [ error, setError ] = useState( false );
   const [ loading, setLoading ] = useState( false );
-  const [ news, setNews ] = useState();
+  const [ booking, setBooking ] = useState();
 
   const [ message, setMessage ] = useState();
 
   useEffect( () => {
     setLoading( true )
-    getAllNews()
-      .then( ( newsdata ) => {
-        setNews( newsdata.data )
+    getAllBooking()
+      .then( ( bookingdata ) => {
+        setBooking (bookingdata.data )
       } )
       .catch( ( err ) => {
         setError( true )
@@ -30,14 +30,14 @@ const AdminNyheder = () => {
       } )
   }, [] )
 
-  const handleDelete = ( id, title ) => {
+  const handleDelete = ( id, name ) => {
 
-    if ( window.confirm( "Er du sikker på at du vil slette denne Nyhed?" ) ) {
+    if ( window.confirm( "Er du sikker på at du vil slette denne Booking?" ) ) {
 
       setLoading( true )
-      deleteNews( id )
-        .then( ( toursdata ) => {
-          setMessage( "Nyheden: " + title +  " er blevet slettet")
+      deleteBooking( id )
+        .then( ( bookingdata ) => {
+          setMessage( "Booking tilhørende: " + name +  " er blevet slettet")
 
         } )
         .catch( ( err ) => {
@@ -56,31 +56,33 @@ const AdminNyheder = () => {
   return (
     <div className='AdminNews'>
       <div className='topPage'>
-        <h1 className='headline'>Her er oversigten over dine Nyheder</h1>
+        <h1 className='headline'>Her er oversigten over dine bookings</h1>
         {/* Tjek med Marianne om hvad der kan gøres med Linket */}
-        
-        <Link to="/admin/adminnyhedopret" className="create">
-          <IoIosCreate size='2em' color='black' title='Create button' />
-        </Link>
       </div>
       { message && <h2>{ message }</h2> }
         { loading && <Loader /> }
         { error && <h2>Error...</h2> }
       <div className='card-container'>
         {
-          news && news.map( n =>
-            <div className='card' key={ n._id }>
-              <h2>{ n.title }</h2>
+          booking && booking.map( b =>
+            <div className='card' key={ b._id }>
+              <h2>{ b.name }</h2>
               <br />
-              <p>{ n.content }</p>
+              <p>{ b.email }</p>
               <br />
-              <p>{ new Date( n.received ).toLocaleDateString( "da", { day: "numeric", month: "long", year: "numeric" } ) }</p>
+              <p>{ b.phone }</p>
               <br />
-              <p><FaComments /> { n.comments.length } kommentarer</p>
+              <p>{ b.note }</p>
+              <br />
+              <p>{ new Date( b.received ).toLocaleDateString( "da", { day: "numeric", month: "long", year: "numeric" } ) }</p>
+              <br />
+              <p>{b.aacept === true ? "Denne booking er godkendt" : "Denne booking er ikke godkendt"}</p>
+              <br />
+              <p>{ b.received }</p>
 
               <div className='editdeletebut'>
-                <AiFillDelete className="delete" size='2em' color='red' title='Delete button' onClick={ () => handleDelete( n._id, n.title ) } />
-                <Link to={ "/admin/adminnyhedret/" + n._id }>
+                <AiFillDelete className="delete" size='2em' color='red' title='Delete button' onClick={ () => handleDelete( b._id, b.name ) } />
+                <Link to={ "/admin/adminbookingret/" + b._id }>
                   <AiFillEdit size='2em' color='green' title='Edit button' />
                 </Link>
 
@@ -93,4 +95,4 @@ const AdminNyheder = () => {
   )
 }
 
-export default AdminNyheder
+export default AdminBooking

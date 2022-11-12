@@ -22,10 +22,9 @@ const AdminNavbar = () => {
         <ul>
           {/* end tilføjet for at ungå at Home er .aktiv konstant */ }
           <li><NavLink to="/admin" end>Admin Home</NavLink></li>
-          <li><NavLink to="adminnews">Nyheder</NavLink></li>
-          <li><NavLink to="adminabout">Admin About</NavLink></li>
-          <li><NavLink to="admincontact">Admin Contact</NavLink></li>
-          <li><NavLink to="adminfooter">Admin Footer</NavLink></li>
+          <li><NavLink to="adminnyheder">Nyheder</NavLink></li>
+          <li><NavLink to="adminabout">About</NavLink></li>
+          <li><NavLink to="adminbooking">Booking</NavLink></li>
           <li><NavLink to="/" end>Public Home</NavLink></li>
           <li><Logout className="logout" /></li>
         </ul>

@@ -9,7 +9,7 @@ import MessageBox from '../../admin/components/MessageBox'
 
 
 
-const AdminToursEdit = () => {
+const ShowNyhed = () => {
     
     const { ID } = useParams()
     
@@ -134,4 +134,4 @@ const AdminToursEdit = () => {
     )
 }
 
-export default AdminToursEdit
+export default ShowNyhed

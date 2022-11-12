@@ -67,11 +67,12 @@
       margin-top: 20px;
     }
     
-    .AdminToursCreate {
+    .AdminOverwatch {
       display: flex;
       flex-direction: column;
       text-align: center;
       align-items: center;
+      margin-top: 50px;
     
       div {
         margin-bottom: 10px;
@@ -80,9 +81,24 @@
       label {
         font-size: 20px;
       }
+
+      textarea{
+        resize: none;
+      }
+
+      .content{
+        width: 100%;
+        height: 100px;
+      }
+
+      button{
+        margin-top: 30px;
+      }
     
       .quill {
-        width: 300px;
+        width: 60%;
+        margin: auto;
+        height: auto;
     
       }
     }

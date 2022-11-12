@@ -6,6 +6,7 @@ import { GoCalendar } from 'react-icons/go'
 import { FaComments } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import AsideComponent from '../layout/components/Aside';
+import AmountPerPage from '../layout/components/AmountPerPage';
 
 const listItems = [
     { title: 'Forside', link: '/' },
@@ -49,10 +50,12 @@ const Nyheder = () => {
 
                 { news &&
                     <>
+                    <div className='amountprpage'>
+                    <AmountPerPage itemsPerPage={ itemsPerPage } setItemsPerPage={ setItemsPerPage } setCurrentPage={ setCurrentPage } options={ [ 2, 4, 6 ] } />
+                    </div>
                         <div className='nyheder'>
 
                             <div className="newsWrapper">
-
                                 { news.map( n =>
                                     <div className="newsElement" key={ n._id }>
                                         <Link className='normaltext' to={ "/nyheder/" + n._id }>

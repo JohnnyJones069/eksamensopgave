@@ -21,6 +21,7 @@ const AdminAbout = () => {
   const [ loading, setLoading ] = useState( false )
 
   const [ content, setContent ] = useState()
+  const [ teaser, setTeaser ] = useState()
   const [ message, setMessage ] = useState()
   const [ thumbImage, makeThumb ] = useThumb()
 
@@ -85,7 +86,7 @@ const AdminAbout = () => {
       { loading && <Loader /> }
       { message && <MessageBox messagetitle={ message } emptyMessage={ setMessage } /> }
 
-      { about && <div>
+      { about && <div className='AdminOverwatch'>
         <form onSubmit={ handleSubmit }>
           <div>
             <label htmlFor="inpTitle">Titel</label>
@@ -93,13 +94,18 @@ const AdminAbout = () => {
             <input type="text" defaultValue={ about.title } name="title" id="inpTitle" placeholder="Indtast title" />
           </div>
           <div>
+            <label htmlFor="inpTeaser">Teaser</label>
+            <br />
+            <ReactQuill className='quill' theme="snow" modules={ modules } defaultValue={ about.teaser } onReady={ !teaser ? setTeaser( about.teaser ) : null } onChange={ setTeaser } />
+          </div>
+          <div>
             <label htmlFor="inpContent">Content</label>
             <br />
-            <ReactQuill theme="snow" modules={ modules } defaultValue={ about.content } onReady={ !content ? setContent( about.content ) : null } onChange={ setContent } />
+            <ReactQuill className='quill' theme="snow" modules={ modules } defaultValue={ about.content } onReady={ !content ? setContent( about.content ) : null } onChange={ setContent } />
           </div>
           <div>
             <p>Nuværende Billed:</p>
-            <img src={ "http://localhost:5099/images/about/" + about.image } alt="Om os billed" width="300px" />
+            <img src={ "http://localhost:5333/images/about/" + about.image } alt="Om os billed" width="300px" />
             <br />
             <label htmlFor='inpImg'>Vælg evt. et andet billed</label>
             <br />

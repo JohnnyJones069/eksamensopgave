@@ -29,33 +29,36 @@ const Navbar = () => {
         <span className="bar bar2"></span>
         <span className="bar bar3"></span>
       </div>
-            <div className="NoDesktop">    
-            <SearchInput/>
-            </div>
+      <div className="NoDesktop">
+        <SearchInput />
+      </div>
 
-      <div className={ showMenu === true ? "navbar-container active" : "navbar-container"}>
+      <div className={ showMenu === true ? "navbar-container active" : "navbar-container" }>
         <ul>
           {/* end tilføjet for at ungå at Home er .aktiv konstant */ }
 
+          <div className="navigation">
             <li><NavLink to="/" end>FORSIDE</NavLink></li>
             <li><NavLink to="omos">OM OS</NavLink></li>
             <li><NavLink to="service">SERVICE</NavLink></li>
             <li><NavLink to="faq">FAQ</NavLink></li>
             <li><NavLink to="nyheder">NYHEDER</NavLink></li>
             <li><NavLink to="kontaktos">KONTAKT OS</NavLink></li>
-            <li className='noShow'>
-            <SearchInput className='noShow'/>
+          </div>
+          <div>
+            <li className='navinput noShow'>
+              <SearchInput />
             </li>
+          </div>
           {
             //  Hvis der er en bruger i "global state/context"
             user ?
-            <>
+              <>
                 <li><NavLink to="admin">ADMIN</NavLink></li>
                 <li><Logout className="logout" /></li>
               </>
               :
               <>
-                <li><NavLink to="login">Login</NavLink></li>
               </>
           }
         </ul>
