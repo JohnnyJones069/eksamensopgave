@@ -90,7 +90,6 @@ const ShowNyhed = () => {
                                 <hr style={ { color: "#789", backgroundColor: "#789", margin: "20px" } } />
                                 { message && <h2>{ message }</h2> }
                                 <h3>Skriv en kommentar</h3>
-                                <form onSubmit={ handleSubmit }>
                                     <div className='inputnameogmail'>
 
                                         <input className='inputname' type="name" name="name" placeholder="Navn" required/>
@@ -98,7 +97,6 @@ const ShowNyhed = () => {
                                     </div>
                                     <textarea className='inputkommentar' type="text" name="comment" placeholder="Kommentar" required/>
                                     <button type='submit'>SEND BESKED</button>
-                                </form>
                             </div>
 
                         </div>
