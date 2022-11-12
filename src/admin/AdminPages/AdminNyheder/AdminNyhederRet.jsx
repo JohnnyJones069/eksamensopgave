@@ -57,7 +57,7 @@ const AdminNyhedRet = () => {
         // formData.append( "content", content )
         // formData.append( "roomtype", roomtype )
 
-        editNews( formData )
+        editNews( formData, ID )
             .then( ( response ) => {
                 console.log( response.data )
                 setMessage( "Nyheden er rettet!" )

@@ -45,27 +45,6 @@ const ShowNyhed = () => {
             } )
     }, [] )
 
-    const handleSubmit = ( e ) => {
-        e.preventDefault() // Forhindre reload af side
-        setLoading( true )
-
-        let formData = new FormData( e.target )
-        formData.append( "content", content );
-        createComment( formData )
-            .then( ( response ) => {
-                e.target.reset() // Tømmere formularfelterne
-                setMessage( "Kommentar er oprettet" )
-            } )
-            .catch( ( err ) => {
-                setError( true )
-                console.log( err )
-            } )
-            .finally( () => {
-                setLoading( false )
-            } )
-
-    }
-
 
     return (
         <div className='ShowNyhedID'>
