@@ -118,7 +118,7 @@ const Kontaktos = () => {
               <div className="kontaktbesked">
                 <textarea name='message' placeholder="Din besked" />
               </div>
-            </div>
+            </div>  
             <button className='kontaktbutton' type='submit'>SEND BESKED</button>
           </form>
 
